@@ -25,16 +25,6 @@ on_ft = 'r'
 repo = 'lervag/vimtex'
 on_ft = 'tex'
 
-#インデント
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-let g:indentLine_setColors = 1
-let g:indentLine_color_term = 241
-let g:indentLine_char = '>'
-'''
-on_ft = 'python'
-
 #python補完
 #[[plugins]]
 #repo = 'davidhalter/jedi-vim'

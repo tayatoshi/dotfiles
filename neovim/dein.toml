@@ -101,6 +101,15 @@ repo = 'easymotion/vim-easymotion'
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
 
+#インデント
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+let g:indentLine_setColors = 1
+let g:indentLine_color_term = 241
+let g:indentLine_char = '>'
+'''
+
 # #vimにpyenv環境を適用
 # [[plugins]]
 # repo = 'lambdalisue/vim-pyenv'
@@ -110,4 +119,3 @@ repo = 'mattn/sonictemplate-vim'
 #末尾の全角と半角の空白文字を赤色でハイライト
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
-
