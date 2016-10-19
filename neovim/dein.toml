@@ -121,3 +121,7 @@ repo = 'bronson/vim-trailing-whitespace'
 #コメントアウトon/off
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
+
+#vimからgit
+[[plugins]]
+repo = 'tpope/vim-fugitive'
