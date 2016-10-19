@@ -119,3 +119,7 @@ let g:indentLine_char = '>'
 #末尾の全角と半角の空白文字を赤色でハイライト
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
+
+#コメントアウトon/off
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
