@@ -1,13 +1,11 @@
+#vimプラグイン管理
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+#ファイルツリー
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = 'nnoremap <silent><C-e> :NERDTreeToggle<CR>'
-
-#stanシンタックス
-[[plugins]]
-repo = 'maverickg/stan.vim'
 
 #自動鉤括弧閉める
 [[plugins]]

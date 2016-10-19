@@ -3,6 +3,11 @@
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+#stanシンタックス
+[[plugins]]
+repo = 'maverickg/stan.vim'
+on_ft = 'stan'
+
 # カーソル位置のコンテキストに合わせてftを切り替える
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
