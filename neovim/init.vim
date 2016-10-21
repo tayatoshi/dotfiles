@@ -88,5 +88,8 @@ nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 " filetypeにtexを追加
 let g:tex_flavor='latex'
 
+"" texのconcealを無効化
+let g:tex_conceal=''
+
 " テンプレートプラグイン用
 let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
