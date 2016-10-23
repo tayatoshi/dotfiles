@@ -27,8 +27,8 @@ augroup END
 '''
 
 # hybrid
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
+#[[plugins]]
+#repo = 'w0ng/vim-hybrid'
 
 #lightlineカラースキーム
 [[plugins]]

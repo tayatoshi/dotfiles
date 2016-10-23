@@ -77,10 +77,13 @@ let R_vsplit=1
 let NERDTreeShowHidden = 1
 
 " 行番号の色を設定
-hi LineNr ctermbg=0 ctermfg=4
-hi CursorLineNr ctermbg=4 ctermfg=0
+hi LineNr ctermfg=246 ctermbg=238
+hi CursorLineNr ctermfg=214 ctermbg=238
 set cursorline
 hi clear CursorLine
+
+" コメントの色変更
+hi Comment ctermfg=gray
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>

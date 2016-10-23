@@ -50,6 +50,9 @@ KEYTIMEOUT=1
 # lsを自動的に ls -Gにする
 alias ls="ls -G"
 
+# color変更
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 # cdしたあとで、自動的に ls -Gする
 function chpwd() { ls -G }
 
@@ -135,9 +138,9 @@ colors
 
 # 一般ユーザ時
 #tmp_prompt="%{${fg[cyan]}%}%n%#  %{${reset_color}%}"
-tmp_prompt="%{${fg[cyan]}%}taya%# %{${reset_color}%}"
-tmp_prompt2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-tmp_rprompt="%{${fg[green]}%}[%~]%{${reset_color}%}"
+tmp_prompt="%{${fg[green]}%}taya%# %{${reset_color}%}"
+tmp_prompt2="%{${fg[green]}%}%_> %{${reset_color}%}"
+tmp_rprompt="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
 tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
 
 # rootユーザ時(太字にし、アンダーバーをつける)
