@@ -12,7 +12,7 @@ export LANGUAGE=ja_JP.UTF-8
 alias vim='nvim'
 
 #treeコマンドで日本語表示&不可視ファイル可視化
-alias tree='tree -Na'
+alias tree='tree -LNaC 2'
 
 # 文字コードをUTF-8に設定
 export LANG=ja_JP.UTF-8
@@ -51,7 +51,7 @@ KEYTIMEOUT=1
 alias ls="ls -G"
 
 # color変更
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=exfxcxdxbxegedabagacad
 
 # cdしたあとで、自動的に ls -Gする
 function chpwd() { ls -G }
@@ -140,7 +140,7 @@ colors
 #tmp_prompt="%{${fg[cyan]}%}%n%#  %{${reset_color}%}"
 tmp_prompt="%{${fg[green]}%}taya%# %{${reset_color}%}"
 tmp_prompt2="%{${fg[green]}%}%_> %{${reset_color}%}"
-tmp_rprompt="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
+tmp_rprompt="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
 tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
 
 # rootユーザ時(太字にし、アンダーバーをつける)
