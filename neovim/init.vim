@@ -82,8 +82,18 @@ hi CursorLineNr ctermfg=214 ctermbg=238
 set cursorline
 hi clear CursorLine
 
-" コメントの色変更
+" コメントの色をグレーに変更
 hi Comment ctermfg=gray
+
+" pythonのシンタックスカラーを変更
+hi pythonStatement ctermfg=5
+hi pythonBuiltin ctermfg=214
+hi pythonInclude ctermfg=5
+hi pythonException ctermfg=5
+hi pythonString ctermfg=green
+hi pythonConditional ctermfg=5
+hi pythonOperator ctermfg=5
+hi pythonQuotes ctermfg=green
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
