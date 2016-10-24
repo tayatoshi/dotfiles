@@ -26,14 +26,6 @@ autocmd!
 augroup END
 '''
 
-# hybrid
-#[[plugins]]
-#repo = 'w0ng/vim-hybrid'
-
-#lightlineカラースキーム
-[[plugins]]
-repo = 'cocopon/lightline-hybrid.vim'
-
 #lightline各種設定
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -75,8 +67,6 @@ function! LightLineMode()
   return fname =~ 'NERD_tree' ? 'NERDTree' :
         \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
-let g:lightline.colorscheme = 'hybrid'
 '''
 
 #クイックラン
