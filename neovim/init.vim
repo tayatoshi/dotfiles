@@ -85,15 +85,25 @@ hi clear CursorLine
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
 
+" 文字列の色を緑に変更
+hi String ctermfg=green
+
 " pythonのシンタックスカラーを変更
 hi pythonStatement ctermfg=5
 hi pythonBuiltin ctermfg=214
 hi pythonInclude ctermfg=5
 hi pythonException ctermfg=5
-hi pythonString ctermfg=green
 hi pythonConditional ctermfg=5
 hi pythonOperator ctermfg=5
-hi pythonQuotes ctermfg=green
+
+" rのシンタックスカラーを変更
+hi rFunction ctermfg=cyan
+hi rAssign ctermfg=white
+hi rFloat ctermfg=214
+hi rNumber ctermfg=214
+hi rOperator ctermfg=white
+hi rType ctermfg=5
+hi Delimiter ctermfg=white
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
