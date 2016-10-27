@@ -88,6 +88,9 @@ hi Comment ctermfg=gray
 " 文字列の色を緑に変更
 hi String ctermfg=green
 
+" searchの対象の文字色を白に、背景色をオレンジ変更
+hi Search ctermfg=white ctermbg=214
+
 " pythonのシンタックスカラーを変更
 hi pythonStatement ctermfg=5
 hi pythonBuiltin ctermfg=214
