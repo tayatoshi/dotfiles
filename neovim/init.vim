@@ -69,7 +69,6 @@ set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
-set imdisable
 
 " Nvim-r 縦分割
 let R_vsplit=1
