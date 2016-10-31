@@ -91,6 +91,9 @@ hi String ctermfg=green
 " searchの対象の文字色を白に、背景色をオレンジ変更
 hi Search ctermfg=white ctermbg=214
 
+" Delimiterを白に変更
+hi Delimiter ctermfg=white
+
 " pythonのシンタックスカラーを変更
 hi pythonStatement ctermfg=5
 hi pythonBuiltin ctermfg=214
@@ -106,7 +109,6 @@ hi rFloat ctermfg=214
 hi rNumber ctermfg=214
 hi rOperator ctermfg=white
 hi rType ctermfg=5
-hi Delimiter ctermfg=white
 
 " texのシンタックスカラーを変更
 hi texStatement ctermfg=214
@@ -115,6 +117,8 @@ hi texMathOper ctermfg=green
 hi texMathMatcher ctermfg=green
 hi texMathDelim ctermfg=red
 hi texInputFile ctermfg=blue
+hi texMatcher ctermfg=blue
+hi texBeginEndName ctermfg=green
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
@@ -122,7 +126,7 @@ nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 " filetypeにtexを追加
 let g:tex_flavor='latex'
 
-"" texのconcealを無効化
+" texのconcealを無効化
 let g:tex_conceal=''
 
 " テンプレートプラグイン用
