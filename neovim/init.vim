@@ -107,13 +107,13 @@ hi rNumber ctermfg=214
 hi rOperator ctermfg=white
 hi rType ctermfg=5
 hi Delimiter ctermfg=white
-hi texStatement ctermfg=214
 
 " texのシンタックスカラーを変更
+hi texStatement ctermfg=214
 hi texMathZoneAS ctermfg=green
 hi texMathOper ctermfg=green
 hi texMathMatcher ctermfg=green
-
+hi texMathDelim ctermfg=red
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
