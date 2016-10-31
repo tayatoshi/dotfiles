@@ -114,6 +114,8 @@ hi texMathZoneAS ctermfg=green
 hi texMathOper ctermfg=green
 hi texMathMatcher ctermfg=green
 hi texMathDelim ctermfg=red
+hi texInputFile ctermfg=blue
+
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
