@@ -124,7 +124,7 @@ function tmux_automatically_attach_session()
     fi
 }
 
-tmux_automatically_attach_session
+# tmux_automatically_attach_session
 
 # -------------------------------------
 # Promptのオプション

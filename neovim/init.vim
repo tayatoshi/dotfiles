@@ -117,7 +117,6 @@ hi texMathOper ctermfg=green
 hi texMathMatcher ctermfg=green
 hi texMathDelim ctermfg=red
 hi texInputFile ctermfg=blue
-hi texMatcher ctermfg=blue
 hi texBeginEndName ctermfg=green
 
 " <Esc><Esc>でハイライトを消す
