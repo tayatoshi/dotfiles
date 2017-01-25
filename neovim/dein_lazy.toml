@@ -8,6 +8,11 @@ on_ft = 'toml'
 repo = 'maverickg/stan.vim'
 on_ft = 'stan'
 
+#juliaシンタックス
+[[plugins]]
+repo = 'JuliaEditorSupport/julia-vim'
+on_ft = 'julia'
+
 # カーソル位置のコンテキストに合わせてftを切り替える
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
@@ -30,20 +35,3 @@ on_ft = 'r'
 repo = 'lervag/vimtex'
 on_ft = 'tex'
 
-#python補完
-#[[plugins]]
-#repo = 'davidhalter/jedi-vim'
-#hook_add = '''
-#let g:jedi#popup_select_first = 1
-#let g:jedi#popup_on_dot = 0
-#let g:jedi#completions_command="<C-j>"
-#let g:jedi#goto_command = "<leader>d"
-#let g:jedi#goto_assignments_command = "<leader>g"
-#let g:jedi#goto_definitions_command = ""
-#let g:jedi#documentation_command = "K"
-#let g:jedi#usages_command = "<leader>n"
-#let g:jedi#rename_command = "<leader>R"
-#autocmd FileType python setlocal completeopt-=preview
-#'''
-#on_ft = 'python'
-#on_i = 1

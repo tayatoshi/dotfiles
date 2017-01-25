@@ -47,7 +47,7 @@ syntax enable
 set ruler
 set t_Co=256
 set nohlsearch
-set tabstop=2
+set tabstop=4
 set smartindent
 set smarttab
 set shiftwidth=2
