@@ -8,11 +8,6 @@ on_ft = 'toml'
 repo = 'maverickg/stan.vim'
 on_ft = 'stan'
 
-#juliaシンタックス
-[[plugins]]
-repo = 'JuliaEditorSupport/julia-vim'
-on_ft = 'julia'
-
 # カーソル位置のコンテキストに合わせてftを切り替える
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
@@ -34,4 +29,3 @@ on_ft = 'r'
 [[plugins]]
 repo = 'lervag/vimtex'
 on_ft = 'tex'
-
