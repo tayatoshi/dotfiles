@@ -154,7 +154,7 @@ precmd () { vcs_info }
 
 # 一般ユーザ時
 #tmp_prompt="%{${fg[cyan]}%}%n%#  %{${reset_color}%}"
-tmp_prompt="%{${fg[green]}%}taya${vcs_info_msg_0_}%{${fg[reset_color]}%}%}$%{${reset_color}%}"
+tmp_prompt='%{${fg[green]}%}taya${vcs_info_msg_0_}%{${fg[green]}%}%}$%{${reset_color}%}'
 tmp_prompt2="%{${fg[green]}%}%_> %{${reset_color}%}"
 tmp_rprompt="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
 tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
