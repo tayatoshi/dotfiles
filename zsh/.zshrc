@@ -132,13 +132,29 @@ setopt auto_param_slash
 
 
 # プロンプトに色を付ける
+autoload -Uz vcs_info
 autoload -U colors
 colors
+# PROMPT変数内で変数参照
+setopt prompt_subst
 
+zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
+zstyle ':vcs_info:git:*' stagedstr "%F{red}!" #commit されていないファイルがある
+zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
+zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f" #通常
+zstyle ':vcs_info:*' actionformats '%F{yellow}[%b(%a)]%f' #rebase 途中,merge コンフリクト等 formats 外の表示
+
+# %b ブランチ情報
+# %a アクション名(mergeなど)
+# %c changes
+# %u uncommit
+
+# プロンプト表示直前に vcs_info 呼び出し
+precmd () { vcs_info }
 
 # 一般ユーザ時
 #tmp_prompt="%{${fg[cyan]}%}%n%#  %{${reset_color}%}"
-tmp_prompt="%{${fg[green]}%}taya%# %{${reset_color}%}"
+tmp_prompt='%{${fg[green]}%}taya${vcs_info_msg_0_}%{${fg[reset_color]}%}%}$%{${reset_color}%} '
 tmp_prompt2="%{${fg[green]}%}%_> %{${reset_color}%}"
 tmp_rprompt="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
 tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
