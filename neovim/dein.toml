@@ -39,7 +39,7 @@ let g:lightline = {
 	\},
 	\'component': {
 	\ 'relativepath':'%F',
-	\	'lineinfo': '⭡ %3l:%-2v',
+	\	'lineinfo': '⭡ %3l[%L]:%-2v',
 	\	'readonly': '%{&readonly?"⭤":""}',
 	\},
 	\ 'component_function': {
