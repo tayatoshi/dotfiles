@@ -135,6 +135,7 @@ setopt auto_param_slash
 autoload -Uz vcs_info
 autoload -U colors
 colors
+
 # PROMPT変数内で変数参照
 setopt prompt_subst
 
