@@ -71,7 +71,7 @@ set wildmode=longest:full,full
 set ttimeoutlen=10
 
 " Nvim-r 縦分割
-let R_vsplit=1
+autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
 
 " NEDTreeで不可視ファイルを表示
 let NERDTreeShowHidden = 1
