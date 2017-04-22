@@ -81,9 +81,9 @@ let g:quickrun_config = {
 \}
 '''
 
-#移動効率化
-[[plugins]]
-repo = 'easymotion/vim-easymotion'
+# #移動効率化
+# [[plugins]]
+# repo = 'easymotion/vim-easymotion'
 
 #テンプレート
 [[plugins]]
