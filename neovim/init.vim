@@ -141,8 +141,6 @@ vnoremap <C-l> <Right>
 
 " Normalモードで;を:にする
 nnoremap ; :
-" Nomalモードのまま空行挿入
-nnoremap <Space><Space> <S-o><Esc>
 
 " テンプレートプラグイン用
 let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
