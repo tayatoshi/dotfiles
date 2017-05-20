@@ -40,6 +40,7 @@ if has('vim_starting') && dein#check_install()
 endif
 " }}}
 
+
 filetype plugin on
 filetype indent on
 set number
@@ -69,12 +70,6 @@ set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
-
-" Nvim-r 縦分割
-autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
-
-" NEDTreeで不可視ファイルを表示
-let NERDTreeShowHidden = 1
 
 " 行番号の色を設定
 hi LineNr ctermfg=246 ctermbg=238
@@ -128,5 +123,32 @@ let g:tex_flavor='latex'
 " texのconcealを無効化
 let g:tex_conceal=''
 
+" 移動用キーマッピング
+nnoremap <C-h> <Left>
+nnoremap <C-j> <Down>
+nnoremap <C-k> <Up>
+nnoremap <C-l> <Right>
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+vnoremap <C-h> <Left>
+vnoremap <C-j> <Down>
+vnoremap <C-k> <Up>
+vnoremap <C-l> <Right>
+
+" Normalモードで;を:にする
+nnoremap ; :
+" Nomalモードのまま空行挿入
+nnoremap <Space><Space> <S-o><Esc>
+
 " テンプレートプラグイン用
 let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
+
+" Nvim-r 縦分割
+autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
+
+" NEDTreeで不可視ファイルを表示
+let NERDTreeShowHidden = 1
