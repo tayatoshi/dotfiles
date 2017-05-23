@@ -142,6 +142,9 @@ vnoremap <C-l> <Right>
 " Normalモードで;を:にする
 nnoremap ; :
 
+" Insertモードで一行挿入
+inoremap <C-o> <Esc>o
+
 " テンプレートプラグイン用
 let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
 
