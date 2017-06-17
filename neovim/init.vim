@@ -75,7 +75,7 @@ set ttimeoutlen=10
 hi LineNr ctermfg=246 ctermbg=238
 hi CursorLineNr ctermfg=214 ctermbg=238
 set cursorline
-hi clear CursorLine
+"hi clear CursorLine
 
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
@@ -111,8 +111,9 @@ hi texMathZoneAS ctermfg=green
 hi texMathOper ctermfg=green
 hi texMathMatcher ctermfg=green
 hi texMathDelim ctermfg=red
-hi texInputFile ctermfg=blue
+hi texInputFile ctermfg=cyan
 hi texBeginEndName ctermfg=green
+hi texSection ctermfg=blue
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
