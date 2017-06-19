@@ -94,8 +94,8 @@ repo = 'mattn/sonictemplate-vim'
 repo = 'Yggdroot/indentLine'
 hook_add = '''
 let g:indentLine_setColors = 1
-let g:indentLine_color_term = 241
-let g:indentLine_char = '>'
+let g:indentLine_color_term = 243
+let g:indentLine_char = '|'
 '''
 
 # #vimにpyenv環境を適用
