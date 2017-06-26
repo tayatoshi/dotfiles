@@ -70,6 +70,7 @@ set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
+set clipboard+=unnamedplus
 
 " 行番号の色を設定
 hi LineNr ctermfg=246 ctermbg=238
