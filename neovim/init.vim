@@ -70,6 +70,8 @@ set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
+
+" ヤンクをクリップボードと連携
 set clipboard+=unnamedplus
 
 " 行番号の色を設定
