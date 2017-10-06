@@ -62,7 +62,8 @@ function fish_prompt
 
     set -l arrow_color "$green"
     if test $__last_command_exit_status != 0
-        set arrow_color "$red"
+        # set arrow_color "$red"
+        set arrow_color "$green"
     end
 
     set -l arrow "$arrow_color➜ "
