@@ -1,4 +1,5 @@
 source ~/.config/fish/alias.fish
+
 # # -------------------------------------
 # # 環境変数
 # # -------------------------------------
@@ -33,3 +34,6 @@ status --is-interactive; and . (pyenv init -| psub)
 # #python startup file
 # PYTHONSTARTUP=~/.pythonrc.py
 # export PYTHONSTARTUP
+
+# 最初の挨拶みたいなのを消す
+set fish_greeting ""
