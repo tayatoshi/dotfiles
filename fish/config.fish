@@ -37,3 +37,6 @@ status --is-interactive; and . (pyenv init -| psub)
 
 # 最初の挨拶みたいなのを消す
 set fish_greeting ""
+
+# iterm2 shell integration
+source ~/.iterm2_shell_integration.fish
