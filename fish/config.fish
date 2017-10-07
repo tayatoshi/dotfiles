@@ -1,8 +1,16 @@
+## 設定ファイル読み込み
+#
+# alias
 source ~/.config/fish/alias.fish
 
-# # -------------------------------------
-# # 環境変数
-# # -------------------------------------
+# iterm2 shell integration
+source ~/.iterm2_shell_integration.fish
+
+## editorをnvimに設定
+set -x EDITOR nvim
+set -x SVN_EDITOR nvim
+
+## 環境変数
 #
 # SSHで接続した先で日本語が使えるようにする
 # set -x LC_CTYPE=en_US.UTF-8
@@ -14,29 +22,20 @@ source ~/.config/fish/alias.fish
 set -x LANG ja_JP.UTF-8
 
 #nvimの設定ファイル
-# set XDG_CONFIG_HOME=~/.config
+set XDG_CONFIG_HOME '~/.config'
 
-
-# lsを自動的に ls -Gにする
-alias ls="ls -G"
-
-# # cdしたあとで、自動的に ls -Gする
+## cdしたあとで、自動的に ls -Gする
 function cd
     builtin cd $argv
 	ls -a
 end
 
+## pyenvのpath指定
 status --is-interactive; and . (pyenv init -| psub)
-#
-# # iterm2 shell integration
-# source ~/.iterm2_shell_integration.`basename $SHELL`
-#
-# #python startup file
-# PYTHONSTARTUP=~/.pythonrc.py
-# export PYTHONSTARTUP
+
+#python startup file
+set --export PYTHONSTARTUP ~/.pythonrc
 
 # 最初の挨拶みたいなのを消す
 set fish_greeting ""
 
-# iterm2 shell integration
-source ~/.iterm2_shell_integration.fish
