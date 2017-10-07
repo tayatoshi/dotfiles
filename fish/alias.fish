@@ -1,2 +1,5 @@
-# tree繧ｳ繝槭Φ繝峨〒譌･譛ｬ隱櫁｡ｨ遉ｺ&荳榊庄隕悶ヵ繧｡繧､繝ｫ蜿ｯ隕門喧
+# vimでneovimを起動
+alias vim 'nvim'
+
+# treeコマンドで日本語表示&不可視ファイル可視化
 alias tree 'tree -LNaC 2'
