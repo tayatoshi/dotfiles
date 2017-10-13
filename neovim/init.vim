@@ -127,6 +127,11 @@ let g:tex_flavor='latex'
 " texのconcealを無効化
 let g:tex_conceal=''
 
+" " vim-latexの設定
+" let g:vimtex_latexmk_enabled = 1
+" let g:vimtex_complete_recursive_bib = 0
+" let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
+
 " 移動用キーマッピング
 nnoremap <C-h> <Left>
 nnoremap <C-j> <Down>

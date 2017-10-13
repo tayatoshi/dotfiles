@@ -26,10 +26,7 @@ if = '''!has('gui_running')'''
 on_ft = 'r'
 
 #for tex
-[[plugins]]
-repo = 'lervag/vimtex'
-on_ft = 'tex'
+# [[plugins]]
+# repo = 'lervag/vimtex'
+# on_ft = 'tex'
 
-[[plugins]]
-repo = 'dag/vim-fish'
-on_ft = 'fish'
