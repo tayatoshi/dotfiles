@@ -23,7 +23,7 @@ setHook("plot.new", get("familyset_hook", pos="MacJapanEnv"))
 
 if(interactive()){
        library(colorout)
-       library(setwidth)
+       # library(setwidth)
        #options(vimcom.verbose = 1) # optional
        #library(vimcom)
    }
