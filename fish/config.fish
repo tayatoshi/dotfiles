@@ -54,12 +54,18 @@ function cd
     ls
     return $status
 end
-## pyenvのpath指定
+
+# pyenvのpath指定
 status --is-interactive; and . (pyenv init -| psub)
 
-#python startup file
+# pyenv-virtualenvのpath指定
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
+
+# python startup file
 set --export PYTHONSTARTUP ~/.pythonrc
+
+# TexのPATH指定
+# set -gx PATH $PATH /Library/TeX/texbin
 
 # 最初の挨拶みたいなのを消す
 set fish_greeting ""
-
