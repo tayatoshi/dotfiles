@@ -25,8 +25,17 @@ repo = 'jalvesaq/Nvim-R'
 if = '''!has('gui_running')'''
 on_ft = 'r'
 
-#for tex
+# #for tex
 # [[plugins]]
 # repo = 'lervag/vimtex'
 # on_ft = 'tex'
 
+# fish syntax
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = 'fish'
+
+# indent for python
+[[plugins]]
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = 'python'
