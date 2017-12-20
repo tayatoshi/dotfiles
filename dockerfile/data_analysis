@@ -1,0 +1,40 @@
+FROM base_ubuntu
+
+MAINTAINER taya
+
+USER root
+
+# for pyenv
+RUN git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+RUN echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+RUN echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+RUN /bin/bash -c source /home/taya/.bashrc
+ENV HOME /home/taya
+ENV PYENV_ROOT $HOME/.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+RUN pyenv install 3.6.2
+RUN pyenv rehash
+RUN pyenv global 3.6.2
+
+# python settings
+RUN pip install jupyter
+RUN pip install numpy
+RUN pip install pandas
+RUN pip install scipy
+RUN pip install statsmodels
+# pip install matplotlib
+# pip install keras
+# pip install tensorflow
+
+# R
+RUN echo -e "\n## For R package"  | tee -a /etc/apt/sources.list
+RUN echo "deb https://cran.ism.ac.jp/bin/linux/ubuntu $(lsb_release -cs)/" | tee -a /etc/apt/sources.list
+RUN set -x gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+#RUN set -x gpg -a --export E084DAB9 | apt-key add -
+RUN apt-get install r-base
+RUN echo "alias r = 'R'" >> ~/.bashrc
+
+USER taya
