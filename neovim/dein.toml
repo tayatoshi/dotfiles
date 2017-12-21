@@ -97,13 +97,6 @@ let g:indentLine_setColors = 1
 let g:indentLine_color_term = 243
 let g:indentLine_char = '|'
 '''
-
-# #vimにpyenv環境を適用
-# [[plugins]]
-# repo = 'lambdalisue/vim-pyenv'
-# depends = ['davidhalter/jedi-vim']
-# on_ft = 'python'
-
 #末尾の全角と半角の空白文字を赤色でハイライト
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
@@ -115,3 +108,13 @@ repo = 'tomtom/tcomment_vim'
 #vimからgit
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = "jpalardy/vim-slime"
+hook_add = '''
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": ":.2"}
+let g:slime_dont_ask_default = 1
+let g:slime_python_ipython = 1
+nnoremap <C-p> :SlimeSend<CR><Down>
+'''
