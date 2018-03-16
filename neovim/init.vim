@@ -40,7 +40,6 @@ if has('vim_starting') && dein#check_install()
 endif
 " }}}
 
-
 filetype plugin on
 filetype indent on
 set number
@@ -59,7 +58,8 @@ set wildmenu wildmode=list:full
 set laststatus=2
 set statusline=%F
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+" set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8
 set fileformats=unix,dos,mac
 let maplocalleader = ','
 set backspace=indent,eol,start
@@ -75,10 +75,12 @@ set ttimeoutlen=10
 set clipboard+=unnamedplus
 
 " 行番号の色を設定
+set cursorline
+set cursorcolumn
 hi LineNr ctermfg=246 ctermbg=238
 hi CursorLineNr ctermfg=214 ctermbg=238
-set cursorline
-"hi clear CursorLine
+hi CursorColumn ctermbg=238
+hi CursorLine ctermbg=238
 
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
@@ -121,6 +123,12 @@ hi texSection ctermfg=blue
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
+" insertモード時の移動
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
 " filetypeにtexを追加
 let g:tex_flavor='latex'
 
@@ -131,22 +139,6 @@ let g:tex_conceal=''
 " let g:vimtex_latexmk_enabled = 1
 " let g:vimtex_complete_recursive_bib = 0
 " let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
-
-" 移動用キーマッピング
-nnoremap <C-h> <Left>
-nnoremap <C-j> <Down>
-nnoremap <C-k> <Up>
-nnoremap <C-l> <Right>
-
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-
-vnoremap <C-h> <Left>
-vnoremap <C-j> <Down>
-vnoremap <C-k> <Up>
-vnoremap <C-l> <Right>
 
 " Normalモードで;を:にする
 nnoremap ; :
@@ -162,3 +154,6 @@ autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
 
 " NEDTreeで不可視ファイルを表示
 let NERDTreeShowHidden = 1
+
+" tagbarの表示
+nnoremap <C-t> :TagbarToggle<CR>
