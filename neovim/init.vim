@@ -82,6 +82,10 @@ hi CursorLineNr ctermfg=214 ctermbg=238
 hi CursorColumn ctermbg=238
 hi CursorLine ctermbg=238
 
+" ポップアップの色
+highlight Pmenu ctermfg=black ctermbg=darkblue
+highlight PmenuSel ctermfg=white ctermbg=darkgray
+
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
 
