@@ -77,8 +77,8 @@ set clipboard+=unnamedplus
 " 行番号の色を設定
 set cursorline
 set cursorcolumn
-hi LineNr ctermfg=246 ctermbg=238
-hi CursorLineNr ctermfg=214 ctermbg=238
+hi LineNr ctermfg=246
+hi CursorLineNr ctermfg=4
 hi CursorColumn ctermbg=238
 hi CursorLine ctermbg=238
 
