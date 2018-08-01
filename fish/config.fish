@@ -62,7 +62,7 @@ status --is-interactive; and . (pyenv init -| psub)
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 # python startup file
-set --export PYTHONSTARTUP ~/.pythonrc
+set --export PYTHONSTARTUP ~/.pythonrc.py
 
 # TexのPATH指定
 # set -gx PATH $PATH /Library/TeX/texbin
