@@ -78,7 +78,7 @@ set clipboard+=unnamedplus
 set cursorline
 set cursorcolumn
 hi LineNr ctermfg=246
-hi CursorLineNr ctermfg=238 ctermbg=4
+hi CursorLineNr ctermfg=white ctermbg=4
 hi CursorColumn ctermbg=238
 hi CursorLine ctermbg=238
 
