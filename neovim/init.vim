@@ -70,6 +70,7 @@ set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
+set expandtab
 
 " ヤンクをクリップボードと連携
 set clipboard+=unnamedplus
@@ -80,7 +81,7 @@ set cursorcolumn
 hi LineNr ctermfg=246
 hi CursorLineNr ctermfg=white ctermbg=4
 hi CursorColumn ctermbg=238
-hi CursorLine ctermbg=238
+hi CursorLine cterm=NONE ctermbg=238
 
 " ポップアップの色
 highlight Pmenu ctermfg=black ctermbg=darkblue
