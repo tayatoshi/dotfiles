@@ -47,10 +47,7 @@ syntax enable
 set ruler
 set t_Co=256
 set nohlsearch
-set tabstop=4
 set smartindent
-set smarttab
-set shiftwidth=2
 set showmatch
 set title
 set incsearch
@@ -65,12 +62,20 @@ let maplocalleader = ','
 set backspace=indent,eol,start
 set noswapfile
 set hlsearch
-set smartcase
-set ignorecase
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
+
+" tab
+set tabstop=4
+set shiftwidth=4
 set expandtab
+set smarttab
+
+" 検索・置換
+set smartcase
+set ignorecase
+set inccommand=split
 
 " ヤンクをクリップボードと連携
 set clipboard+=unnamedplus
@@ -162,3 +167,4 @@ let NERDTreeShowHidden = 1
 
 " tagbarの表示
 nnoremap <C-t> :TagbarToggle<CR>
+
