@@ -55,6 +55,11 @@ function cd
     return $status
 end
 
+# juliaの起動
+function julia
+    /Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia $argv;
+end
+
 # pyenvのpath指定
 status --is-interactive; and . (pyenv init -| psub)
 
