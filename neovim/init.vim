@@ -87,6 +87,8 @@ hi LineNr ctermfg=246
 hi CursorLineNr ctermfg=white ctermbg=4
 hi CursorColumn ctermbg=238
 hi CursorLine cterm=NONE ctermbg=238
+hi vimHighlight ctermfg=214
+hi vimCommand ctermfg=214
 
 " ポップアップの色
 highlight Pmenu ctermfg=black ctermbg=darkblue
@@ -128,7 +130,16 @@ hi texMathMatcher ctermfg=green
 hi texMathDelim ctermfg=red
 hi texInputFile ctermfg=cyan
 hi texBeginEndName ctermfg=green
+hi texBeginEnd ctermfg=214
 hi texSection ctermfg=blue
+hi texCite ctermfg=9
+hi texRefZone ctermfg=9
+hi texSpecialChar ctermfg=5
+hi texOnlyMath ctermfg=white
+
+" bibtexのシンタックスカラーを変更
+hi bibKey ctermfg = 2
+hi bibEntryKw ctermfg = 214
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
