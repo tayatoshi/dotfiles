@@ -5,10 +5,13 @@ alias vim 'nvim'
 alias tree 'tree -LNaC 2'
 
 # rmする際に確認する
-alias rm='rm -i'
+alias rm 'rm -i'
 
 # mvする際にすでに対象が存在すれば確認する
-alias mv='mv -i'
+alias mv 'mv -i'
 
 # cpする際にすでに対象が存在すれば確認する
-alias cp='cp -i'
+alias cp 'cp -i'
+
+# 画面を常につけておく
+alias caf 'caffeinate -d'

@@ -70,9 +70,8 @@ function fish_prompt
     if [ $USER = 'root' ]
         set arrow "$arrow_color# "
     end
-	set -l name $green taya
 
-    # set -l cwd $cyan(basename (prompt_pwd))
+	set -l name $green $USER
 
     set -l repo_type (_repo_type)
     if [ $repo_type ]
