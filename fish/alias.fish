@@ -15,3 +15,9 @@ alias cp 'cp -i'
 
 # 画面を常につけておく
 alias caf 'caffeinate -d'
+
+# catでbatを実行
+alias cat 'bat'
+
+# topでhtopを実行
+alias top 'htop'
