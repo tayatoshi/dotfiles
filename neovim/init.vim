@@ -91,8 +91,8 @@ hi vimHighlight ctermfg=214
 hi vimCommand ctermfg=214
 
 " ポップアップの色
-highlight Pmenu ctermfg=black ctermbg=darkblue
-highlight PmenuSel ctermfg=white ctermbg=darkgray
+highlight PmenuSel ctermfg=black ctermbg=darkblue
+highlight Pmenu ctermfg=white ctermbg=darkgray
 
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
