@@ -92,7 +92,7 @@ hi vimCommand ctermfg=214
 
 " ポップアップの色
 highlight PmenuSel ctermfg=black ctermbg=darkblue
-highlight Pmenu ctermfg=white ctermbg=darkgray
+highlight Pmenu ctermfg=white ctermbg=240
 
 " コメントの色をグレーに変更
 hi Comment ctermfg=gray
@@ -179,3 +179,9 @@ let NERDTreeShowHidden = 1
 " tagbarの表示
 nnoremap <C-t> :TagbarToggle<CR>
 
+" deoplete.nvimのpython補完用
+let g:python_host_prog = '/Users/taya/.pyenv/versions/neovim2/bin/python'
+" let g:python3_host_prog = '/Users/taya/.pyenv/versions/neovim3/bin/python'
+
+" docstringのポップアップを無効
+autocmd FileType python setlocal completeopt-=preview
