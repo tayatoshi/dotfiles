@@ -50,8 +50,8 @@ let g:deoplete#omni_patterns = {}
 '''
 hook_source = '''
 call deoplete#custom#option('auto_complete', v:false)
-inoremap <silent><expr> <C-n>
-    \ pumvisible() ? "\<C-n>" : deoplete#manual_complete()
+inoremap <silent><expr> <C-p>
+    \ pumvisible() ? "\<C-p>" : deoplete#manual_complete()
 '''
 hook_add = '''
   let g:deoplete#enable_at_startup   = 1
