@@ -23,6 +23,8 @@ function PROMPT_PWD --description "Print the current working directory, shortene
 end
 
 function fish_right_prompt --description '右側にカレント・ディレクトリを表示'
-	set -l cwd (set_color cyan)(PROMPT_PWD)
-	echo $cwd
+    set -l cyan (set_color -o cyan)
+	set -l cwd (PROMPT_PWD)
+	echo $cyan$cwd
+    set_color normal
 end
