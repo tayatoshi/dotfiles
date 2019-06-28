@@ -20,7 +20,7 @@ set -x LANG ja_JP.UTF-8
 #nvimの設定ファイル
 set XDG_CONFIG_HOME '~/.config'
 
-## cdしたあとで、自動的に ls -aする
+## cdしたあとで、自動的に ls -Gする
 function cd
     if test (count $argv) -gt 1
         printf "%s\n" (_ "Too many args for cd command")
@@ -55,10 +55,6 @@ function cd
     return $status
 end
 
-# juliaの起動
-function julia
-    /Applications/Julia-1.0.app/Contents/Resources/julia/bin/julia $argv;
-end
 
 # pyenvのpath指定
 status --is-interactive; and . (pyenv init -| psub)
