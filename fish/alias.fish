@@ -24,3 +24,5 @@ alias cat 'bat'
 
 # topでhtopを実行
 alias top 'htop'
+
+alias ls 'ls -Gl'
