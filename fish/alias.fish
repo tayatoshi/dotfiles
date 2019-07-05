@@ -25,4 +25,8 @@ alias cat 'bat'
 # topでhtopを実行
 alias top 'htop'
 
+# lsでls -Gl
 alias ls 'ls -Gl'
+
+
+alias gtree 'git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
