@@ -47,12 +47,16 @@ if = 'has("nvim")'
 on_i = 1
 hook_post_source = '''
 let g:deoplete#omni_patterns = {}
+call deoplete#custom#var('omni', 'input_patterns', {
+          \ 'tex': g:vimtex#re#deoplete
+          \})
 '''
 # hook_source = '''
 # call deoplete#custom#option('auto_complete', v:false)
 # inoremap <silent><expr> <C-p>
 #     \ pumvisible() ? "\<C-p>" : deoplete#manual_complete()
 # '''
+
 hook_add = '''
   let g:deoplete#enable_at_startup   = 1
   let g:deoplete#max_list = 20
