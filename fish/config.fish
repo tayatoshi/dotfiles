@@ -57,13 +57,17 @@ end
 
 
 # pyenvのpath指定
-status --is-interactive; and . (pyenv init -| psub)
+set -x PYENV_ROOT (pyenv root)
+eval (pyenv init - | source)
 
 # pyenv-virtualenvのpath指定
-status --is-interactive; and source (pyenv virtualenv-init -|psub)
+eval (pyenv virtualenv-init - | source)
 
 # python startup file
 set --export PYTHONSTARTUP ~/.pythonrc.py
+
+# 自作シェルスクリプトのパス
+set PATH ~/dotfiles/shellscript $PATH
 
 # TexのPATH指定
 # set -gx PATH $PATH /Library/TeX/texbin
