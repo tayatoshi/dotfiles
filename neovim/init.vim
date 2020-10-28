@@ -187,3 +187,11 @@ let g:python_host_prog = '/Users/taya/.pyenv/versions/neovim2/bin/python'
 " docstringのポップアップを無効
 autocmd FileType python setlocal completeopt-=preview
 
+" airblade/vim-gitgutterの設定
+set updatetime=100
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg = NONE
+highlight GitGutterAdd ctermfg=green ctermbg=NONE
+highlight GitGutterChange ctermfg=red ctermbg=NONE
+highlight GitGutterDelete ctermfg=yellow ctermbg=NONE
+
