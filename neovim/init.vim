@@ -191,7 +191,7 @@ autocmd FileType python setlocal completeopt-=preview
 set updatetime=100
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg = NONE
-highlight GitGutterAdd ctermfg=green ctermbg=NONE
-highlight GitGutterChange ctermfg=red ctermbg=NONE
-highlight GitGutterDelete ctermfg=yellow ctermbg=NONE
+highlight GitGutterAdd ctermfg=white ctermbg=35
+highlight GitGutterChange ctermfg=white ctermbg=74
+highlight GitGutterDelete ctermfg=white ctermbg=222
 
