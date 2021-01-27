@@ -198,3 +198,26 @@ highlight GitGutterDelete ctermfg=white ctermbg=168
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '>>'
 let g:gitgutter_sign_removed = '<<'
+
+" タブの設定
+nmap te :tabedit<Return>
+nmap <S-Tab> :tabprev<Return>
+nmap <Tab> :tabnext<Return>
+
+" Split window on vim
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+
+" Move window on vim
+nmap <Space> <C-w>w
+map s<left> <C-w>h
+map s<up> <C-w>k
+map s<down> <C-w>j
+map s<right> <C-w>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+
+" vimの画面分割の線の色を変更
+hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
