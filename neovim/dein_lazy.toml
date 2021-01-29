@@ -51,23 +51,30 @@ call deoplete#custom#var('omni', 'input_patterns', {
           \ 'tex': g:vimtex#re#deoplete
           \})
 '''
-# hook_source = '''
-# call deoplete#custom#option('auto_complete', v:false)
-# inoremap <silent><expr> <C-p>
-#     \ pumvisible() ? "\<C-p>" : deoplete#manual_complete()
-# '''
-
+hook_source = '''
+  call deoplete#custom#option({
+      " \ 'enable_at_startup'         :  1,
+      \ 'max_list'                  :  20,
+      \ 'auto_complete_delay'       :  0,
+      " \ 'ignore_case'               :  0,
+      " \ 'smart_case'                :  1,
+      \ 'camel_case'                :  0,
+      " \ 'refresh_always'            :  0,
+      " \ 'auto_complete_start_length':  1,
+      \ 'buffer_path':1
+      \ })
+  '''
 hook_add = '''
   let g:deoplete#enable_at_startup   = 1
-  let g:deoplete#max_list = 20
-  let g:deoplete#auto_complete_delay = 0
+  " let g:deoplete#max_list = 20
+  " let g:deoplete#auto_complete_delay = 0
   " let g:deoplete#enable_ignore_case = 1
   " let g:deoplete#auto_complete_start_length = 1
-  let g:deoplete#enable_camel_case = 0
+  " let g:deoplete#enable_camel_case = 0
   " let g:deoplete#enable_ignore_case = 0
   " let g:deoplete#enable_refresh_always = 0
   " let g:deoplete#enable_smart_case = 1
-  let g:deoplete#file#enable_buffer_path = 1
+  " let g:deoplete#file#enable_buffer_path = 1
 '''
 
 # pythonコード補完用
