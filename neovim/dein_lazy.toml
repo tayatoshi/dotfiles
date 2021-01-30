@@ -25,10 +25,10 @@ repo = 'jalvesaq/Nvim-R'
 if = '''!has('gui_running')'''
 on_ft = 'r'
 
-#for tex
-[[plugins]]
-repo = 'lervag/vimtex'
-on_ft = 'tex'
+#for tex(init.vim のlet g:tex_conceal = ''が効いてないからコメントアウト)
+# [[plugins]]
+# repo = 'lervag/vimtex'
+# on_ft = 'tex'
 
 # fish syntax
 [[plugins]]
