@@ -1,0 +1,7 @@
+{
+  "jedi": {
+    "enable": true,
+    "startupMessage": false,
+    "executable.command": "~/.pyenv/versions/neovim3/bin/jedi-language-server"
+  }
+}
