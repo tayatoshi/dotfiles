@@ -5,7 +5,7 @@ alias vim 'nvim'
 alias vi 'nvim'
 
 # treeコマンドで日本語表示&不可視ファイル可視化
-alias tree 'tree -LNaC 2'
+# alias tree 'tree -LNaC 2'
 
 # rmする際に確認する
 alias rm 'rm -i'
@@ -26,7 +26,15 @@ alias cat 'bat'
 alias top 'htop'
 
 # lsでls -Gl
-alias ls 'ls -Gl'
+# alias ls 'ls -Gl'
 
-
+# git tree
 alias gtree 'git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
+
+# lsd
+alias ls='lsd -l'
+alias la='lsd -la'
+
+# コマンドで日本語表示&不可視ファイル可視化
+alias tree 'tree -LNaC 2'
+
