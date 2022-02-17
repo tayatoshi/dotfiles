@@ -8,8 +8,8 @@ repo = 'scrooloose/nerdtree'
 hook_add = 'nnoremap <silent><C-e> :NERDTreeToggle<CR>'
 
 #自動鉤括弧閉める
-[[plugins]]
-repo = 'Townk/vim-autoclose'
+# [[plugins]]
+# repo = 'Townk/vim-autoclose'
 
 #検索
 [[plugins]]
@@ -57,16 +57,16 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'ryanoasis/vim-devicons'
 
 #クイックラン
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-let g:quickrun_config = {
-\   'tex': {
-\       'command': 'latexmk',
-\       'exec': ['%c -gg -pdfdvi %s', 'open %s:r.pdf']
-\   },
-\}
-'''
+# [[plugins]]
+# repo = 'thinca/vim-quickrun'
+# hook_add = '''
+# let g:quickrun_config = {
+# \   'tex': {
+# \       'command': 'latexmk',
+# \       'exec': ['%c -gg -pdfdvi %s', 'open %s:r.pdf']
+# \   },
+# \}
+# '''
 
 #移動効率化
 [[plugins]]
@@ -100,52 +100,66 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
-# ctagsの作成
-[[plugins]]
-repo = 'szw/vim-tags'
+# # ctagsの作成
+# [[plugins]]
+# repo = 'szw/vim-tags'
+#
+# # ctagsの一覧を表示
+# [[plugins]]
+# repo = 'majutsushi/tagbar'
 
-# ctagsの一覧を表示
-[[plugins]]
-repo = 'majutsushi/tagbar'
 
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+# let s:denite_win_width_percent = 0.8
+# let s:denite_win_height_percent = 0.6
+#
+# " Change denite default options
+# call denite#custom#option('default', {
+#     \ 'split': 'floating',
+#     \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+#     \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+#     \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+#     \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+#     \ })
+# nnoremap [denite] <Nop>
+# nmap <C-g> [denite]
+# " nnoremap <silent> [denite]g :<C-u>Denite grep -buffer-name=search-buffer-denite<CR>
+# " nnoremap <silent> [denite]r :<C-u>Denite -resume -buffer-name=search-buffer-denite<CR>
+# nnoremap <silent> [denite]p :<C-u>Denite file/rec<CR>
+#   autocmd FileType denite call s:denite_my_settings()
+# function! s:denite_my_settings() abort
+#   nnoremap <silent><buffer><expr> <CR>
+#   \ denite#do_map('do_action')
+#   nnoremap <silent><buffer><expr> d
+#   \ denite#do_map('do_action', 'delete')
+#   nnoremap <silent><buffer><expr> p
+#   \ denite#do_map('do_action', 'preview')
+#   nnoremap <silent><buffer><expr> q
+#   \ denite#do_map('quit')
+#   nnoremap <silent><buffer><expr> i
+#   \ denite#do_map('open_filter_buffer')
+#   nnoremap <silent><buffer><expr> <Space>
+#   \ denite#do_map('toggle_select').'j'
+# endfunction
+# autocmd FileType denite-filter call s:denite_filter_my_settings()
+# function! s:denite_filter_my_settings() abort
+#   call deoplete#custom#buffer_option('auto_complete', v:false)
+# endfunction
+# '''
+#
+#################### Uncategorized ###################
 
+# 対となる括弧を追加/削除する
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
+
+# coc
 [[plugins]]
-repo = 'Shougo/denite.nvim'
+repo = 'neoclide/coc.nvim'
+merged = 0
+rev = 'release'
 hook_add = '''
-let s:denite_win_width_percent = 0.8
-let s:denite_win_height_percent = 0.6
-
-" Change denite default options
-call denite#custom#option('default', {
-    \ 'split': 'floating',
-    \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
-    \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
-    \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
-    \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
-    \ })
-nnoremap [denite] <Nop>
-nmap <C-g> [denite]
-" nnoremap <silent> [denite]g :<C-u>Denite grep -buffer-name=search-buffer-denite<CR>
-" nnoremap <silent> [denite]r :<C-u>Denite -resume -buffer-name=search-buffer-denite<CR>
-nnoremap <silent> [denite]p :<C-u>Denite file/rec<CR>
-  autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
-autocmd FileType denite-filter call s:denite_filter_my_settings()
-function! s:denite_filter_my_settings() abort
-  call deoplete#custom#buffer_option('auto_complete', v:false)
-endfunction
+source ~/.config/nvim/plugins/coc.vim
 '''
-
