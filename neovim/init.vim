@@ -82,7 +82,12 @@ set clipboard+=unnamedplus
 
 " colorscheme
 " colorscheme onedark
-au MyAutoCmd VimEnter * nested colorscheme iceberg
+colorscheme iceberg
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE
+highlight Folded ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
 " set row and column line
 set cursorline
