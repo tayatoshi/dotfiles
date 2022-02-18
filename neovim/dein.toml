@@ -115,3 +115,24 @@ repo = 'nvim-lua/popup.nvim'
 repo = 'nvim-lua/plenary.nvim'
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
+hook_add = """
+lua << EOF
+function telescope_buffer_dir()
+  return vim.fn.expand('%:p:h')
+end
+
+local telescope = require('telescope')
+local actions = require('telescope.actions')
+
+telescope.setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous
+      },
+    },
+  }
+}
+EOF
+"""
