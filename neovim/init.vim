@@ -80,66 +80,18 @@ set inccommand=split
 " ヤンクをクリップボードと連携
 set clipboard+=unnamedplus
 
-" 行番号の色を設定
+" colorscheme
+" colorscheme onedark
+au MyAutoCmd VimEnter * nested colorscheme iceberg
+
+" set row and column line
 set cursorline
 set cursorcolumn
-hi LineNr ctermfg=246
-hi CursorLineNr ctermfg=white ctermbg=4
-hi CursorColumn ctermbg=238
-hi CursorLine cterm=NONE ctermbg=238
-hi vimHighlight ctermfg=214
-hi vimCommand ctermfg=214
-
-" ポップアップの色
-highlight PmenuSel ctermfg=black ctermbg=darkblue
-highlight Pmenu ctermfg=lightyellow ctermbg=240
-
-" コメントの色をグレーに変更
-hi Comment ctermfg=gray
-
-" 文字列の色を緑に変更
-hi String ctermfg=green
-
-" searchの対象の文字色を白に、背景色をオレンジ変更
-hi Search ctermfg=white ctermbg=214
-
-" Delimiterを白に変更
-hi Delimiter ctermfg=white
-
-" pythonのシンタックスカラーを変更
-hi pythonStatement ctermfg=5
-hi pythonBuiltin ctermfg=214
-hi pythonInclude ctermfg=5
-hi pythonException ctermfg=5
-hi pythonConditional ctermfg=5
-hi pythonOperator ctermfg=5
-
-" rのシンタックスカラーを変更
-hi rFunction ctermfg=cyan
-hi rAssign ctermfg=white
-hi rFloat ctermfg=214
-hi rNumber ctermfg=214
-hi rOperator ctermfg=white
-hi rType ctermfg=5
-
-" texのシンタックスカラーを変更
-hi texStatement ctermfg=214
-hi texMathZoneAS ctermfg=green
-hi texMathOper ctermfg=green
-hi texMathMatcher ctermfg=green
-hi texMathDelim ctermfg=red
-hi texInputFile ctermfg=cyan
-hi texBeginEndName ctermfg=green
-hi texBeginEnd ctermfg=214
-hi texSection ctermfg=blue
-hi texCite ctermfg=9
-hi texRefZone ctermfg=9
-hi texSpecialChar ctermfg=5
-hi texOnlyMath ctermfg=white
-
-" bibtexのシンタックスカラーを変更
-hi bibKey ctermfg = 2
-hi bibEntryKw ctermfg = 214
+"
+" color of popup window
+set termguicolors
+set winblend=10
+set pumblend=10
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
@@ -156,11 +108,6 @@ let g:tex_flavor='latex'
 " texのconcealを無効化
 let g:tex_conceal=''
 
-" " vim-latexの設定
-" let g:vimtex_latexmk_enabled = 1
-" let g:vimtex_complete_recursive_bib = 0
-" let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
-
 " Normalモードで;を:にする
 nnoremap ; :
 
@@ -176,25 +123,12 @@ autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
 " NEDTreeで不可視ファイルを表示
 let NERDTreeShowHidden = 1
 
-" tagbarの表示
-" nnoremap <C-t> :TagbarToggle<CR>
-nnoremap tt :TagbarToggle<CR>
-
-" deoplete.nvimのpython補完用
-let g:python_host_prog = '/Users/taya/.pyenv/versions/neovim2/bin/python'
-" let g:python3_host_prog = '/Users/taya/.pyenv/versions/neovim3/bin/python'
-
 " docstringのポップアップを無効
 autocmd FileType python setlocal completeopt-=preview
 
 " airblade/vim-gitgutterの設定
 set updatetime=100
 let g:gitgutter_override_sign_column_highlight = 0
-highlight SignColumn ctermbg = NONE
-highlight GitGutterAdd ctermfg=white ctermbg=34
-highlight GitGutterChange ctermfg=white ctermbg=74
-highlight GitGutterDelete ctermfg=white ctermbg=168
-
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '>>'
 let g:gitgutter_sign_removed = '<<'
@@ -221,3 +155,7 @@ map sl <C-w>l
 
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
+
+" coc.nvimのための設定(定義ジャンプとリファレンス)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
