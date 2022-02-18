@@ -5,23 +5,24 @@ repo = 'Shougo/dein.vim'
 #ファイルツリー
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-hook_add = 'nnoremap <silent><C-e> :NERDTreeToggle<CR>'
+hook_add = '''
+source ~/.config/nvim/plugins/nerdtree.rc.vim
+'''
 
 #検索
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_add = '''
-nmap n <Plug>(anzu-n)
-nmap N <Plug>(anzu-N)
-nmap * <Plug>(anzu-star)
-nmap # <Plug>(anzu-sharp)
-nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
-augroup vim-anzu
-autocmd!
-    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
-augroup END
+source ~/.config/nvim/plugins/vim-anzu.rc.vim
 '''
 
+# [[plugins]]
+# repo = 'nvim-lualine/lualine.nvim'
+# hook_add = '''
+# source ~/.config/nvim/plugins/lualine.rc.lua
+# '''
+
+# ステータスバーの装飾
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
@@ -46,10 +47,9 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 '''
-
-# ステータスバーの装飾
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
 
 # アイコンの設定
 # [[plugins]]
@@ -69,9 +69,7 @@ repo = 'mattn/sonictemplate-vim'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = '''
-let g:indentLine_setColors = 1
-let g:indentLine_color_term = 243
-let g:indentLine_char = '|'
+source ~/.config/nvim/plugins/indentLine.rc.vim
 '''
 #末尾の全角と半角の空白文字を赤色でハイライト
 [[plugins]]
@@ -88,6 +86,9 @@ repo = 'tpope/vim-fugitive'
 # 差分を自動表示
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-gitgutter.rc.vim
+'''
 
 # 対となる括弧を追加/削除する
 [[plugins]]
@@ -99,7 +100,7 @@ repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
 hook_add = '''
-source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/coc.rc.vim
 '''
 
 # colorscheme
@@ -116,23 +117,5 @@ repo = 'nvim-lua/plenary.nvim'
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
 hook_add = """
-lua << EOF
-function telescope_buffer_dir()
-  return vim.fn.expand('%:p:h')
-end
-
-local telescope = require('telescope')
-local actions = require('telescope.actions')
-
-telescope.setup{
-  defaults = {
-    mappings = {
-      i = {
-        ["<C-j>"] = actions.move_selection_next,
-        ["<C-k>"] = actions.move_selection_previous
-      },
-    },
-  }
-}
-EOF
+source ~/.config/nvim/plugins/telescope.rc.vim
 """

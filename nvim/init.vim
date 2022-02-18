@@ -55,7 +55,6 @@ set wildmenu wildmode=list:full
 set laststatus=2
 set statusline=%F
 set encoding=utf-8
-" set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileencodings=utf-8
 set fileformats=unix,dos,mac
 let maplocalleader = ','
@@ -122,21 +121,8 @@ inoremap <C-o> <Esc>o
 " テンプレートプラグイン用
 let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
 
-" Nvim-r 縦分割
-autocmd VimResized * let R_rconsole_width = winwidth(0) / 2
-
-" NEDTreeで不可視ファイルを表示
-let NERDTreeShowHidden = 1
-
 " docstringのポップアップを無効
 autocmd FileType python setlocal completeopt-=preview
-
-" airblade/vim-gitgutterの設定
-set updatetime=100
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '>>'
-let g:gitgutter_sign_removed = '<<'
 
 " タブの設定
 nmap te :tabedit<Return>
@@ -145,7 +131,7 @@ nmap <Tab> :tabnext<Return>
 
 " Split window on vim
 nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+nmap sv :vsplit<Return><C-w>
 
 " Move window on vim
 nmap <Space> <C-w>w
@@ -160,19 +146,3 @@ map sl <C-w>l
 
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
-
-" coc.nvimのための設定(定義ジャンプとリファレンス)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" Using Lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
