@@ -1,8 +1,3 @@
-#tomlシンタックス
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
 #stanシンタックス
 [[plugins]]
 repo = 'maverickg/stan.vim'
@@ -34,7 +29,14 @@ source ~/.config/nvim/plugins/Nvim-R.rc.vim
 # repo = 'lervag/vimtex'
 # on_ft = 'tex'
 
-# fish syntax
 [[plugins]]
-repo = 'dag/vim-fish'
-on_ft = 'fish'
+repo = 'nvim-treesitter/nvim-treesitter'
+merged = 0
+on_event = 'BufRead'
+hook_post_update = '''
+TSUpdate
+'''
+hook_source = '''
+source ~/.config/nvim/plugins/nvim-treesitter.rc.lua
+'''
+

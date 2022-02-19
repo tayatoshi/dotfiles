@@ -80,18 +80,20 @@ set inccommand=split
 set clipboard+=unnamedplus
 
 " colorscheme
-" colorscheme onedark
 colorscheme iceberg
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE
 highlight Folded ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
-
+highlight Visual  guifg=NONE guibg=#4C566A gui=none
+"
 " set row and column line
 set cursorline
 set cursorcolumn
-"
+highlight CursorLine guibg=#3B4252
+highlight CursorColumn guibg=#3B4252
+
 " color of popup window
 set termguicolors
 set winblend=10

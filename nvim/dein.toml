@@ -26,29 +26,14 @@ source ~/.config/nvim/plugins/vim-anzu.rc.vim
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0 " remove 'X' at the end of the tabline
-let g:airline#extensions#tabline#tabs_label = ''       " can put text here like BUFFERS to denote buffers (I clear it so nothing is shown)
-let g:airline#extensions#tabline#buffers_label = ''
-let g:airline_theme = 'bubblegum'
-
-set laststatus=2
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_left_sep = ''
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+source ~/.config/nvim/plugins/vim-airline.rc.vim
 '''
+
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+hook_add='''
+let g:airline_theme='iceberg'
+'''
 
 
 # アイコンの設定
@@ -107,7 +92,7 @@ source ~/.config/nvim/plugins/coc.rc.vim
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
 [[plugins]]
-repo = 'navarasu/onedark.nvim'
+repo = 'EdenEast/nightfox.nvim'
 
 # fuzzy finder
 [[plugins]]
@@ -119,3 +104,10 @@ repo = 'nvim-telescope/telescope.nvim'
 hook_add = """
 source ~/.config/nvim/plugins/telescope.rc.vim
 """
+
+[[plugins]]
+repo = 'vim-python/python-syntax'
+hook_add = '''
+let g:python_highlight_all = 1
+'''
+
