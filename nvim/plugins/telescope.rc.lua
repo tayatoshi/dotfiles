@@ -23,6 +23,7 @@ telescope.setup{
       },
     },
     file_ignore_patterns = {
+      "%.DS_Store",
       "%.git/.*",
       "%.vim/.*",
       "node_modules/.*",
