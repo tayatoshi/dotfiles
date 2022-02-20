@@ -10,31 +10,39 @@ local actions = require('telescope.actions')
 local fb_actions = require('telescope._extensions.file_browser.actions')
 
 telescope.setup{
-defaults = {
+  defaults = {
     mappings = {
-        i = {
-            ["<C-j>"] = actions.move_selection_next,
-            ["<C-k>"] = actions.move_selection_previous
-            },
-        n = {
-            ["q"] = actions.close,
-            ["v"] = actions.file_vsplit,
-            ["s"] = actions.file_split,
-            },
-        },
+      i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous
+      },
+      n = {
+        ["q"] = actions.close,
+        ["v"] = actions.file_vsplit,
+        ["s"] = actions.file_split,
+      },
     },
-extensions = {
+    file_ignore_patterns = {
+      "%.git/.*",
+      "%.vim/.*",
+      "node_modules/.*",
+      "%.idea/.*",
+      "%.vscode/.*",
+      "%.history/.*"
+    },
+  },
+  extensions = {
     file_browser = {
-        mappings = {
-            i = {
-                ["H"] = fb_actions.goto_parent_dir,
-                ["N"] = fb_actions.create,
-                ["R"] = fb_actions.rename,
-                ["D"] = fb_actions.remove,
-                ["~"] = fb_actions.goto_cwd,
-                },
-            },
+      mappings = {
+        i = {
+          ["H"] = fb_actions.goto_parent_dir,
+          ["N"] = fb_actions.create,
+          ["R"] = fb_actions.rename,
+          ["D"] = fb_actions.remove,
+          ["~"] = fb_actions.goto_cwd,
         },
+      },
     },
+  },
 }
 require("telescope").load_extension "file_browser"
