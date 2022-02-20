@@ -89,7 +89,7 @@ highlight LineNr ctermbg=NONE guibg=NONE
 highlight Folded ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
-"
+
 " set row and column line
 set cursorline
 set cursorcolumn
@@ -112,9 +112,6 @@ inoremap <C-l> <Right>
 
 " filetypeにtexを追加
 let g:tex_flavor='latex'
-
-" texのconcealを無効化
-let g:tex_conceal=''
 
 " Normalモードで;を:にする
 nnoremap ; :
