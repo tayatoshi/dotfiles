@@ -85,7 +85,7 @@ repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
 hook_add = '''
-source ~/.config/nvim/plugins/coc.rc.vim
+source ~/.config/nvim/plugins/coc.rc.lua
 '''
 
 # colorscheme
@@ -102,12 +102,11 @@ repo = 'nvim-lua/plenary.nvim'
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
 hook_add = """
-source ~/.config/nvim/plugins/telescope.rc.vim
+source ~/.config/nvim/plugins/telescope.rc.lua
 """
-
 [[plugins]]
-repo = 'vim-python/python-syntax'
-hook_add = '''
-let g:python_highlight_all = 1
-'''
+repo = 'nvim-telescope/telescope-file-browser.nvim'
+# hook_add = """
+# source ~/.config/nvim/plugins/telescope.rc.vim
+# """
 
