@@ -148,4 +148,8 @@ map sl <C-w>l
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
 
-
+" coc.nvimのdiagnosticsの色変更
+hi CocErrorSign guifg=#d1666a
+hi CocWarningSign guifg=#ff922b
+hi CocInfoSign guifg=#e9b189
+hi CocHintSign guifg=#95c4ce

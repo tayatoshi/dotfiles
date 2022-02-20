@@ -21,13 +21,14 @@ require('lualine').setup {
       symbols = { added = ' ', modified = '柳 ', removed = ' ' },
     },
     {'diagnostics',
-    symbols = { error = ' ', warn = ' ', info = ' ' },
+    sources = {"coc"},
+    symbols = { error = " ", warn = ' ', info = ' ', hint = 'ஐ'},
     diagnostics_color = {
       -- Same values as the general color option can be used here.
-      error = 'DiagnosticError', -- Changes diagnostics' error color.
-      warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
-      info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
-      hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
+      error = {fg='#d1666a'}, -- Changes diagnostics' error color.
+      warn  = {fg='#ff922b'},  -- Changes diagnostics' warn color.
+      info  = {fg='#e9b189'},  -- Changes diagnostics' info color.
+      hint  = {fg='#95c4ce'},  -- Changes diagnostics' hint color.
     },
   },
   },
