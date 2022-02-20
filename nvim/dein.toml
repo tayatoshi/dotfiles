@@ -9,33 +9,6 @@ hook_add = '''
 source ~/.config/nvim/plugins/nerdtree.rc.vim
 '''
 
-#検索
-[[plugins]]
-repo = 'osyo-manga/vim-anzu'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-anzu.rc.vim
-'''
-
-# [[plugins]]
-# repo = 'nvim-lualine/lualine.nvim'
-# hook_add = '''
-# source ~/.config/nvim/plugins/lualine.rc.lua
-# '''
-
-# ステータスバーの装飾
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-source ~/.config/nvim/plugins/vim-airline.rc.vim
-'''
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add='''
-let g:airline_theme='iceberg'
-'''
-
-
 # アイコンの設定
 # [[plugins]]
 # repo = 'ryanoasis/vim-devicons'
@@ -106,7 +79,3 @@ source ~/.config/nvim/plugins/telescope.rc.lua
 """
 [[plugins]]
 repo = 'nvim-telescope/telescope-file-browser.nvim'
-# hook_add = """
-# source ~/.config/nvim/plugins/telescope.rc.vim
-# """
-

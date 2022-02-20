@@ -52,7 +52,6 @@ set showmatch
 set title
 set incsearch
 set wildmenu wildmode=list:full
-set laststatus=2
 set statusline=%F
 set encoding=utf-8
 set fileencodings=utf-8
@@ -66,11 +65,14 @@ set wildmode=longest:full,full
 set ttimeoutlen=10
 
 " tab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
-
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.rb setlocal tabstop=4 shiftwidth=4
+augroup END
 " 検索・置換
 set smartcase
 set ignorecase
@@ -148,3 +150,5 @@ map sl <C-w>l
 
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
+
+
