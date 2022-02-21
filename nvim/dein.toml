@@ -4,9 +4,9 @@ repo = 'Shougo/dein.vim'
 
 #ファイルツリー
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'kyazdani42/nvim-tree.lua'
 hook_add = '''
-source ~/.config/nvim/plugins/nerdtree.rc.vim
+source ~/.config/nvim/plugins/nvim-tree.rc.lua
 '''
 
 # アイコンの設定
