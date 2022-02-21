@@ -3,6 +3,7 @@ local custom_iceberg_dark = require'lualine.themes.iceberg_dark'
 -- Change the background of lualine_c section for normal mode
 custom_iceberg_dark.normal.b.fg = '#c6c8d1'
 custom_iceberg_dark.normal.c.fg = '#c6c8d1'
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -47,7 +48,7 @@ require('lualine').setup {
       readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
       unnamed = '[No Name]', -- Text to show for unnamed buffers.
     },
-    color = { fg = '#d4d5db', gui='italic,bold' },
+    color = { fg = '#d4d5db', gui='bold' },
   },
 },
 lualine_x = {'encoding',
