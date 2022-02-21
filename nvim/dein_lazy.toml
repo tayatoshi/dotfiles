@@ -23,7 +23,3 @@ source ~/.config/nvim/plugins/lualine.rc.lua
 repo = 'jalvesaq/Nvim-R'
 if = '''!has('gui_running')'''
 on_ft = 'r'
-hook_add = '''
-source ~/.config/nvim/plugins/Nvim-R.rc.vim
-'''
-
