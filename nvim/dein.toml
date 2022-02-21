@@ -84,3 +84,6 @@ repo = 'nvim-telescope/telescope-file-browser.nvim'
 # vimのウィンドウサイズの変更
 [[plugins]]
 repo = 'simeji/winresizer'
+hook_add = '''
+source ~/.config/nvim/plugins/winresizer.rc.lua
+'''
