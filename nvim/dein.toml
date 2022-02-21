@@ -9,6 +9,10 @@ hook_add = '''
 source ~/.config/nvim/plugins/nvim-tree.rc.lua
 '''
 
+# tablineの装飾
+[[plugins]]
+repo = 'romgrk/barbar.nvim'
+#
 # アイコンの設定
 # [[plugins]]
 # repo = 'ryanoasis/vim-devicons'
@@ -87,3 +91,4 @@ repo = 'simeji/winresizer'
 hook_add = '''
 source ~/.config/nvim/plugins/winresizer.rc.lua
 '''
+

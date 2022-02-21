@@ -37,7 +37,7 @@ require('lualine').setup {
   {
     'filename',
     file_status = true,      -- Displays file status (readonly status, modified status)
-    path = 1,                -- 0: Just the filename
+    path = 2,                -- 0: Just the filename
     -- 1: Relative path
     -- 2: Absolute path
 
@@ -71,15 +71,8 @@ icon_only = false, -- Display only an icon for filetype
 inactive_sections = {
   lualine_a = {},
   lualine_b = {},
-  lualine_c = {'filename'},
+  lualine_c = {{'filename',file_status = true, path = 2}},
   lualine_x = {'location'},
-  lualine_y = {},
-  lualine_z = {}
-},
-tabline = {
-  lualine_a = {},
-  lualine_b = {'branch', 'filename',},
-  lualine_x = {},
   lualine_y = {},
   lualine_z = {}
 },
