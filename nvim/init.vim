@@ -63,16 +63,14 @@ set hlsearch
 set wildmenu
 set wildmode=longest:full,full
 set ttimeoutlen=10
+set mouse+=a
 
 " tab
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set smarttab
-augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.rb setlocal tabstop=4 shiftwidth=4
-augroup END
+
 " 検索・置換
 set smartcase
 set ignorecase
@@ -107,6 +105,8 @@ hi CocWarningSign guifg=#ff922b
 hi CocInfoSign guifg=#e9b189
 hi CocHintSign guifg=#95c4ce
 
+" vimの画面分割の線の色を変更
+hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
@@ -126,12 +126,6 @@ nnoremap ; :
 " Insertモードで一行挿入
 inoremap <C-o> <Esc>o
 
-" テンプレートプラグイン用
-let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
-
-" docstringのポップアップを無効
-autocmd FileType python setlocal completeopt-=preview
-
 " タブの設定
 nmap te :tabedit<Return>
 nmap <S-Tab> :tabprev<Return>
@@ -143,6 +137,7 @@ nmap sv :vsplit<Return><C-w>
 
 " Move window on vim
 nmap <Space> <C-w>w
+nmap <C_w>h <C_w><
 map s<left> <C-w>h
 map s<up> <C-w>k
 map s<down> <C-w>j
@@ -152,7 +147,6 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 
-" vimの画面分割の線の色を変更
-hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
-
+" テンプレートプラグイン用
+let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
 
