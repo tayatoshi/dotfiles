@@ -5,7 +5,7 @@ Usage:
 ------
 save my dotfiles
 
-Contens:
+Files:
 -------------
 <pre>
 .
