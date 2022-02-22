@@ -7,39 +7,33 @@ save my dotfiles
 
 Contens:
 -------------
-*dotfiles*  
-|  
-|  
-|  
-|---*R*  
-|   |---.Rprofile  
-|  
-|  
-|---*python*  
-|		|---.pythonrc.py  
-|  
-|  
-|---*tmux*  
-|		|---.tmux.conf  
-|  
-|  
-|---*tex*  
-|		|---tmux.conf    
-|  
-|  
-|---*neovim*  
-|		|---dein.toml  
-|		|---dein_lazy.toml	  
-|		|---init.vim  
-|  
-|  
-|---*zsh*  
-|		|---.zshrc  
-|  
-|---READEME.md  
-|  
-|  
-|---pip_global.txt  
-|  		
-|  
-|---pip_SL.txt  
+.
+├── .gitignore
+├── R
+│   └── .Rprofile
+├── README.md
+├── brew
+│   └── brewlist.txt
+├── color
+│   └── iterm
+├── fish
+│   ├── alias.fish
+│   ├── config.fish
+│   └── functions
+├── nvim
+│   ├── coc-settings.json
+│   ├── dein.toml
+│   ├── dein_lazy.toml
+│   ├── init.vim
+│   └── plugins
+├── python
+│   └── .pythonrc.py
+├── shellscript
+│   └── ide
+├── tex
+│   └── .latexmkrc
+├── tmux
+│   └── .tmux.conf
+└── zsh
+    └── .zshrc
+
