@@ -1,1 +1,1 @@
-vim.g.winresizer_start_key = '<C-m>'
+vim.g.winresizer_start_key = '<C-p>'

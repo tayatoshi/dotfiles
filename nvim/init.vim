@@ -111,11 +111,14 @@ hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gu
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
+" <C-j>に<Esc>を割り当てる when insert mode
+inoremap <C-j> <Esc>
+
 " insertモード時の移動
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+" inoremap <C-h> <Left>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
+" inoremap <C-l> <Right>
 
 " filetypeにtexを追加
 let g:tex_flavor='latex'
@@ -125,6 +128,10 @@ nnoremap ; :
 
 " Insertモードで一行挿入
 inoremap <C-o> <Esc>o
+
+" sキーを別マッピングで追加
+nnoremap <C-s> s
+vnoremap <C-s> s
 
 " タブの設定
 nmap te :tabedit<Return>
@@ -137,7 +144,7 @@ nmap sv :vsplit<Return><C-w>
 
 " Move window on vim
 nmap <Space> <C-w>w
-nmap <C_w>h <C_w><
+nmap <C_w>h <Cw><
 map s<left> <C-w>h
 map s<up> <C-w>k
 map s<down> <C-w>j
