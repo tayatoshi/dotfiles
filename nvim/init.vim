@@ -88,6 +88,14 @@ highlight Folded ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
 
+" 非activeなwindowを色付け
+augroup ChangeBackground
+  autocmd!
+  autocmd WinEnter * highlight Normal guibg=default
+  autocmd WinEnter * highlight NormalNC guibg='#2f3441'
+  autocmd FocusGained * highlight Normal guibg=default
+  autocmd FocusLost * highlight Normal guibg='#2f3441'
+augroup END
 " set row and column line
 set cursorline
 set cursorcolumn
