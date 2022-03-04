@@ -93,8 +93,6 @@ augroup ChangeBackground
   autocmd!
   autocmd WinEnter * highlight Normal guibg=default
   autocmd WinEnter * highlight NormalNC guibg='#2f3441'
-  autocmd FocusGained * highlight Normal guibg=default
-  autocmd FocusLost * highlight Normal guibg='#2f3441'
 augroup END
 " set row and column line
 set cursorline
