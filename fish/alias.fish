@@ -14,7 +14,8 @@ alias mv 'mv -i'
 alias cp 'cp -i'
 
 # 画面を常につけておく
-alias caf 'caffeinate -d'
+# alias caf 'caffeinate -d'
+alias caf '~/dotfiles/shellscript/cafd.sh'
 
 # catでbatを実行
 alias cat 'bat'
