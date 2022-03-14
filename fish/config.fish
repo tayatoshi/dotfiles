@@ -67,3 +67,6 @@ end
 
 # lsdのファイル表示を青太文字から青普通文字に変更
 export LS_COLORS="$LS_COLORS:di=00;34:*.png=00;35"
+
+# プロンプト用starship の読み込み(config.fishの最後に書いておく)
+starship init fish | source
