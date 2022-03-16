@@ -112,3 +112,10 @@ hook_add = '''
 source ~/.config/nvim/plugins/winresizer.rc.lua
 '''
 
+# shade inactive windows
+[[plugins]]
+repo = 'sunjon/Shade.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins/shade.rc.lua
+'''
+
