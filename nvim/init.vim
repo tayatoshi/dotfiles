@@ -112,6 +112,9 @@ hi CocWarningSign guifg=#ff922b
 hi CocInfoSign guifg=#e9b189
 hi CocHintSign guifg=#95c4ce
 
+" highlights for tabline(barbar.nvim)
+highlight BufferCurrent guifg=#E6E6E6 guibg=#647b9c
+
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
 
