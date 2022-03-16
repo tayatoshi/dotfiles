@@ -89,11 +89,12 @@ highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
 
 " 非activeなwindowを色付け
-augroup ChangeBackground
-  autocmd!
-  autocmd WinEnter * highlight Normal guibg=default
-  autocmd WinEnter * highlight NormalNC guibg='#464646'
-augroup END
+" augroup ChangeBackground
+"   autocmd!
+"   autocmd WinEnter * highlight Normal guibg=default
+"   autocmd WinEnter * highlight NormalNC guibg='#ffffff'
+" augroup END
+
 " set row and column line
 set cursorline
 set cursorcolumn
