@@ -140,10 +140,10 @@ inoremap <C-o> <Esc>o
 nnoremap <C-s> s
 vnoremap <C-s> s
 
-" タブの設定
-nmap te :tabedit<Return>
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+" settings for buffer
+nmap nb :enew<Return>
+nmap <Tab> :bnext<Return>
+nmap <S-Tab> :bprev<Return>
 
 " Split window on vim
 nmap ss :split<Return><C-w>w
