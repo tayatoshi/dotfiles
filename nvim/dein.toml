@@ -2,12 +2,18 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-#ファイルツリー
 [[plugins]]
-repo = 'kyazdani42/nvim-tree.lua'
-hook_add = '''
-source ~/.config/nvim/plugins/nvim-tree.rc.lua
-'''
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = """
+source ~/.config/nvim/plugins/defx.rc.vim
+"""
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
 
 # tablineの装飾
 [[plugins]]
@@ -17,8 +23,9 @@ source ~/.config/nvim/plugins/barbar.rc.lua
 '''
 
 # アイコンの設定
-# [[plugins]]
-# repo = 'ryanoasis/vim-devicons'
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
@@ -37,9 +44,9 @@ hook_add = '''
 source ~/.config/nvim/plugins/indentLine.rc.lua
 '''
 
-#末尾の全角と半角の空白文字を赤色でハイライト
-[[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
+# #末尾の全角と半角の空白文字を赤色でハイライト
+# [[plugins]]
+# repo = 'bronson/vim-trailing-whitespace'
 
 #コメントアウトon/off
 [[plugins]]
@@ -74,6 +81,8 @@ source ~/.config/nvim/plugins/coc.rc.lua
 repo = 'cocopon/iceberg.vim'
 [[plugins]]
 repo = 'EdenEast/nightfox.nvim'
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
 
 # fuzzy finder
 [[plugins]]
