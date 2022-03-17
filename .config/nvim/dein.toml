@@ -2,13 +2,6 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# #ファイルツリー
-# [[plugins]]
-# repo = 'kyazdani42/nvim-tree.lua'
-# hook_add = '''
-# source ~/.config/nvim/plugins/nvim-tree.rc.lua
-# '''
-
 # file tree
 [[plugins]]
 repo = 'Shougo/defx.nvim'

@@ -89,13 +89,13 @@ highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
 
 " 非activeなwindowを色付け
-augroup ChangeBackground
-  autocmd!
-  autocmd WinEnter * highlight Normal guibg=default
-  autocmd WinEnter * highlight NormalNC guibg='#474646'
-  autocmd FocusGained * highlight Normal guibg=default " 追加
-  autocmd FocusLost * highlight Normal guibg='#474646' " 追加
-augroup END
+" augroup ChangeBackground
+"   autocmd!
+"   autocmd WinEnter * highlight Normal guibg=default
+"   autocmd WinEnter * highlight NormalNC guibg='#474646'
+"   autocmd FocusGained * highlight Normal guibg=default " 追加
+"   autocmd FocusLost * highlight Normal guibg='#474646' " 追加
+" augroup END
 
 " set row and column line
 set cursorline
@@ -146,7 +146,7 @@ nnoremap <C-s> s
 vnoremap <C-s> s
 
 " settings for buffer
-nmap nb :enew<Return>
+nmap te :enew<Return>
 nmap <Tab> :bnext<Return>
 nmap <S-Tab> :bprev<Return>
 
@@ -165,7 +165,4 @@ map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
-
-" テンプレートプラグイン用
-let g:sonictemplate_vim_template_dir = ['~/.cache/dein/repos/github.com/mattn/sonictemplate-vim/template']
 
