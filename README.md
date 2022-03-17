@@ -1,40 +1,59 @@
 dotfiles
 ========
-
-Usage:
-------
-save my dotfiles
+This repositry is my dotfiles.
+- NeoVim
+    - iceberg: favorite color scheme
+    - plugins
+        - Telescope.nvim,
+        - defx.nvim
+        - 
+- iTerm2: famous terminal emurator
+- fonts
+    - hack nerd font
+    - ricty for pwerline
+- Homebrew: famous package manager
+- htop: Luxury top command
+- lsd: Luxury ls command
+- lazygit:
+- lazydocker:
+- Git: You don't have to say it
+- fish: smart shell
+- starship: for prompt on terminal.
+- tmux
 
 Files:
 -------------
 <pre>
 .
+├── .Rprofile
+├── .config
+│   ├── fish
+│   ├── nvim
+│   └── starship.toml
 ├── .gitignore
-├── R
-│   └── .Rprofile
+├── .latexmkrc
+├── .tmux.conf
+├── .zshrc
 ├── README.md
 ├── brew
 │   └── brewlist.txt
-├── color
-│   └── iterm
-├── fish
-│   ├── alias.fish
-│   ├── config.fish
-│   └── functions
-├── nvim
-│   ├── coc-settings.json
-│   ├── dein.toml
-│   ├── dein_lazy.toml
-│   ├── init.vim
-│   └── plugins
-├── python
-│   └── .pythonrc.py
-├── shellscript
-│   └── ide
-├── tex
-│   └── .latexmkrc
-├── tmux
-│   └── .tmux.conf
-└── zsh
-    └── .zshrc
+└── shellscript
+    ├── cafd.sh
+    ├── ide
+    └── install_dotfiles.sh
 </pre>
+
+Usage:
+-------------
+Link symbolics each file and folders by the floowing command:
+```bash
+git clone git@github.com:tayatoshi/dotfiles.git
+cd shellscript
+chmod 777 install_dotfiles.sh
+./install_dotfiles.sh
+```
+
+Note:
+-------------
+I have not yet set up automatic installation of packages in Homebew .
+
