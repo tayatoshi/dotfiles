@@ -1,5 +1,7 @@
 dotfiles
 ========
+![ss01](/screenshot/ss_01.png)
+
 This repositry is my dotfiles.
 - NeoVim
     - iceberg: favorite color scheme
