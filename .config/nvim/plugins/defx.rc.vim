@@ -35,12 +35,12 @@ call defx#custom#column('git', 'indicators', {
 autocmd FileType defx call s:defx_my_settings()
   function! s:defx_my_settings() abort
     " Define mappings
-    nnoremap <silent><buffer><expr> <CR> defx#is_directory() ? defx#do_action('open_or_close_tree') : defx#do_action('multi', ['drop', 'quit'])
+    nnoremap <silent><buffer><expr> <CR> defx#is_directory() ? defx#do_action('open_or_close_tree') : defx#do_action('open')
     nnoremap <silent><buffer><expr> c defx#do_action('copy')
     nnoremap <silent><buffer><expr> m defx#do_action('move')
     nnoremap <silent><buffer><expr> p defx#do_action('paste')
-    nnoremap <silent><buffer><expr> E defx#do_action('multi', [['open', 'vsplit'], 'quit'])
-    nnoremap <silent><buffer><expr> t defx#do_action('open_tree', 'toggle')
+    nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
+    nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
     nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
     nnoremap <silent><buffer><expr> N defx#do_action('new_file')
     nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')
