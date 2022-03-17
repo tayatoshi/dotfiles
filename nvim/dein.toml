@@ -46,10 +46,16 @@ repo = 'easymotion/vim-easymotion'
 repo = 'mattn/sonictemplate-vim'
 
 #インデント
+# [[plugins]]
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+# source ~/.config/nvim/plugins/indentLine.rc.lua
+# '''
+
 [[plugins]]
-repo = 'Yggdroot/indentLine'
+repo = 'lukas-reineke/indent-blankline.nvim'
 hook_add = '''
-source ~/.config/nvim/plugins/indentLine.rc.lua
+source ~/.config/nvim/plugins/indent-blankline.rc.lua
 '''
 
 # #末尾の全角と半角の空白文字を赤色でハイライト
@@ -113,9 +119,9 @@ source ~/.config/nvim/plugins/winresizer.rc.lua
 '''
 
 # shade inactive windows
-[[plugins]]
-repo = 'sunjon/Shade.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins/shade.rc.lua
-'''
+# [[plugins]]
+# repo = 'sunjon/Shade.nvim'
+# hook_add = '''
+# source ~/.config/nvim/plugins/shade.rc.lua
+# '''
 
