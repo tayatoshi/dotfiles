@@ -1,6 +1,6 @@
 dotfiles
 ========
-![ss01](/screenshot/ss_01.png)
+![ss01](/images/ss_01.png)
 
 This repositry is my dotfiles.
 - NeoVim
