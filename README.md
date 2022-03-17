@@ -2,52 +2,49 @@ dotfiles
 ========
 ![ss01](/images/ss_01.png)
 
-This repositry is my dotfiles.
-- NeoVim
-    - iceberg: favorite color scheme
-    - plugins
-        - Telescope.nvim,
-        - defx.nvim
-        - 
-- iTerm2: famous terminal emurator
-- fonts
-    - hack nerd font
-    - ricty for pwerline
-- Homebrew: famous package manager
-- htop: Luxury top command
-- lsd: Luxury ls command
-- lazygit:
-- lazydocker:
-- Git: You don't have to say it
-- fish: smart shell
+This repository is my dotfiles.
+
+#### NeoVim
+- iceberg: favorite color scheme
+- Telescope.nvim: fzzey finder
+- defx.nvim: Filer
+- indent.nvim
+- lualine.lua
+     
+#### fish
 - starship: for prompt on terminal.
-- tmux
+- Fonts
+    - hack nerd font
+    - ricty for powerline
+
+#### Others
+- iTerm2: famous terminal emurator with iceberg color scheme
+- tmux: Let color of inactive panes be shade
+- lsd: Luxury ls command
 
 Files:
 -------------
-<pre>
-.
-├── .Rprofile
-├── .config
-│   ├── fish
-│   ├── nvim
-│   └── starship.toml
-├── .gitignore
-├── .latexmkrc
-├── .tmux.conf
-├── .zshrc
-├── README.md
-├── brew
-│   └── brewlist.txt
-└── shellscript
-    ├── cafd.sh
-    ├── ide
-    └── install_dotfiles.sh
-</pre>
+    .
+    ├── .Rprofile
+    ├── .config
+    │   ├── fish
+    │   ├── nvim
+    │   └── starship.toml
+    ├── .gitignore
+    ├── .latexmkrc
+    ├── .tmux.conf
+    ├── .zshrc
+    ├── README.md
+    ├── brew
+    │   └── brewlist.txt
+    └── shellscript
+        ├── cafd.sh
+        ├── ide
+        └── install_dotfiles.sh
 
 Usage:
 -------------
-Link symbolics each file and folders by the floowing command:
+Link symbolics each files and folders by the floowing command:
 ```bash
 git clone git@github.com:tayatoshi/dotfiles.git
 cd shellscript
