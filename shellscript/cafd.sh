@@ -1,3 +1,4 @@
+#!/bin/bash
 CAFFEINATE_aa() {
     cat << EOS
 
