@@ -4,20 +4,20 @@ dotfiles
 
 This repository is my dotfiles.
 
-#### NeoVim
+### NeoVim
 - iceberg: favorite color scheme
 - Telescope.nvim: fzzey finder
 - defx.nvim: Filer
 - indent.nvim
 - lualine.lua
      
-#### fish
+### fish
 - starship: for prompt on terminal.
 - Fonts
     - hack nerd font
     - ricty for powerline
 
-#### Others
+### Others
 - iTerm2: famous terminal emurator with iceberg color scheme
 - tmux: Let color of inactive panes be shade
 - lsd: Luxury ls command
