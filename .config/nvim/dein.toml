@@ -1,4 +1,4 @@
-#vimプラグイン管理
+# plugin manager
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -16,34 +16,26 @@ repo = 'kristijanhusak/defx-icons'
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
 
-# tablineの装飾
+# decorate tabline
 [[plugins]]
 repo = 'romgrk/barbar.nvim'
 hook_add = '''
 source ~/.config/nvim/plugins/barbar.rc.lua
 '''
 
-# アイコンの設定
+# icons
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
-#移動効率化
+# Move efficiently
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 
-#テンプレート
+# template
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
-
-#インデント
-# [[plugins]]
-# repo = 'Yggdroot/indentLine'
-# hook_add = '''
-# source ~/.config/nvim/plugins/indentLine.rc.lua
-# '''
 
 [[plugins]]
 repo = 'lukas-reineke/indent-blankline.nvim'
@@ -51,19 +43,15 @@ hook_add = '''
 source ~/.config/nvim/plugins/indent-blankline.rc.lua
 '''
 
-# #末尾の全角と半角の空白文字を赤色でハイライト
-# [[plugins]]
-# repo = 'bronson/vim-trailing-whitespace'
-
-#コメントアウトon/off
+# comment on/off
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
-#vimからgit
+# git on vim
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-# 差分を自動表示
+# code diff on left edge
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -104,7 +92,7 @@ source ~/.config/nvim/plugins/telescope.rc.lua
 [[plugins]]
 repo = 'nvim-telescope/telescope-file-browser.nvim'
 
-# vimのウィンドウサイズの変更
+# change window size of vim
 [[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
