@@ -111,7 +111,7 @@ set pumblend=10
 " coc.nvimのdiagnosticsの色変更
 hi CocErrorSign guifg=#d1666a
 hi CocWarningSign guifg=#ff922b
-hi CocInfoSign guifg=#e9b189
+hi CocInfoSign guifg=#bd87e6
 hi CocHintSign guifg=#95c4ce
 
 " highlights for tabline(barbar.nvim)

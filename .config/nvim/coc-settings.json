@@ -26,10 +26,10 @@
     "typeParameter": "\uf278",
     "default": "\uf29c"
   },
-  "diagnostic.infoSign": "\uf527",
-  "diagnostic.hintSign": "ஐ",
-  "diagnostic.warningSign": "\uf525",
-  "diagnostic.errorSign": "\uf188",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.errorSign": "",
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": true,
   "jedi": {

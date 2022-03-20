@@ -23,12 +23,12 @@ require('lualine').setup {
     },
     {'diagnostics',
     sources = {"coc"},
-    symbols = { error = " ", warn = ' ', info = ' ', hint = 'ஐ'},
+    symbols = { error = " ", warn = ' ', info = ' ', hint = ''},
     diagnostics_color = {
       -- Same values as the general color option can be used here.
       error = {fg='#d1666a'}, -- Changes diagnostics' error color.
       warn  = {fg='#ff922b'},  -- Changes diagnostics' warn color.
-      info  = {fg='#e9b189'},  -- Changes diagnostics' info color.
+      info  = {fg='#bd87e6'},  -- Changes diagnostics' info color.
       hint  = {fg='#95c4ce'},  -- Changes diagnostics' hint color.
     },
   },
