@@ -115,7 +115,8 @@ hi CocInfoSign guifg=#bd87e6
 hi CocHintSign guifg=#95c4ce
 
 " highlights for tabline(barbar.nvim)
-highlight BufferCurrent guifg=#E6E6E6 guibg=#647b9c
+highlight BufferCurrent guifg=#E6E6E6 gui=bold
+highlight BufferVisible guifg=#444b71
 
 " vimの画面分割の線の色を変更
 hi VertSplit ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
@@ -125,12 +126,6 @@ nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
 " <C-j>に<Esc>を割り当てる when insert mode
 inoremap <C-j> <Esc>
-
-" insertモード時の移動
-" inoremap <C-h> <Left>
-" inoremap <C-j> <Down>
-" inoremap <C-k> <Up>
-" inoremap <C-l> <Right>
 
 " filetypeにtexを追加
 let g:tex_flavor='latex'
