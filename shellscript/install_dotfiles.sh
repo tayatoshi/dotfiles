@@ -19,4 +19,5 @@ fi
 ln -sf ~/dotfiles/.config/starship.toml ~/.config/starship.toml
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.Rprofile ~/.Rprofile
+ln -sf ~/dotfiles/changelog.config.js ~/changelog.config.js
 echo '---SymLink Done.---'
