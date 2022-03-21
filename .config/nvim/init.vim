@@ -118,7 +118,7 @@ hi CocHintSign guifg=#95c4ce
 highlight BufferCurrent guifg=#E6E6E6 guibg=#647b9c
 
 " vimの画面分割の線の色を変更
-hi VertSplit ctermfg=green ctermbg=241 cterm=NONE guifg=#64645e guibg=#64645e gui=NONE
+hi VertSplit ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
