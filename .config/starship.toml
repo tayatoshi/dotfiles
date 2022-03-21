@@ -108,3 +108,19 @@ detect_files = []
 [lua]
 symbol = " "
 style = "#EBCB8B"
+
+[nodejs]
+style = 'green'
+
+[julia]
+symbol = " "
+style = "#a093c7"
+
+[ruby]
+symbol = " "
+style = "red"
+
+[rust]
+symbol = " "
+style = "red"
+
