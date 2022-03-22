@@ -109,17 +109,17 @@ set winblend=10
 set pumblend=10
 
 " coc.nvimのdiagnosticsの色変更
-hi CocErrorSign guifg=#d1666a
-hi CocWarningSign guifg=#ff922b
-hi CocInfoSign guifg=#bd87e6
-hi CocHintSign guifg=#95c4ce
+highlight CocErrorSign guifg=#d1666a
+highlight CocWarningSign guifg=#ff922b
+highlight CocInfoSign guifg=#bd87e6
+highlight CocHintSign guifg=#95c4ce
 
 " highlights for tabline(barbar.nvim)
 highlight BufferCurrent guifg=#E6E6E6 gui=bold
 highlight BufferVisible guifg=#444b71
 
 " vimの画面分割の線の色を変更
-hi VertSplit ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
+highlight VertSplit ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
 
 " <Esc><Esc>でハイライトを消す
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
