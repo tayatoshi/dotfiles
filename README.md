@@ -47,7 +47,7 @@ Usage:
 Link symbolics each files and folders by the floowing command:
 ```bash
 git clone git@github.com:tayatoshi/dotfiles.git
-cd shellscript
+cd dotfiles/shellscript
 chmod 777 install_dotfiles.sh
 ./install_dotfiles.sh
 ```
