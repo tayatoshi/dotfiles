@@ -126,3 +126,7 @@ style = "red"
 
 [golang]
 symbol = ' '
+
+[package]
+symbol = " "
+style = "208"
