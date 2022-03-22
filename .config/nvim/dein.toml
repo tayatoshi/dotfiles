@@ -91,7 +91,11 @@ source ~/.config/nvim/plugins/telescope.rc.lua
 """
 [[plugins]]
 repo = 'nvim-telescope/telescope-file-browser.nvim'
-
+[[plugins]]
+repo = 'folke/todo-comments.nvim'
+hook_add = """
+source ~/.config/nvim/plugins/todo-comments.rc.lua
+"""
 # change window size of vim
 [[plugins]]
 repo = 'simeji/winresizer'
