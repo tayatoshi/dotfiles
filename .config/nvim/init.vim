@@ -126,6 +126,7 @@ nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
 
 " <C-j>に<Esc>を割り当てる when insert mode
 inoremap <C-j> <Esc>
+vnoremap <C-j> <Esc>
 
 " filetypeにtexを追加
 let g:tex_flavor='latex'
