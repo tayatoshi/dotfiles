@@ -65,7 +65,7 @@ $line_break\
 $jobs\
 $status\
 $shell\
-[└──](bold green)$character"""
+[└](bold green)$character"""
 
 [username]
 style_user = "white bold"
