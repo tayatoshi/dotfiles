@@ -7,7 +7,7 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/defx.nvim'
 depends = ['defx-git', 'defx-icons']
 hook_add = """
-source ~/.config/nvim/plugins/defx.rc.vim
+source ~/dotfiles/.config/nvim/plugins/defx.rc.vim
 """
 
 [[plugins]]
@@ -20,7 +20,7 @@ repo = 'kristijanhusak/defx-git'
 [[plugins]]
 repo = 'romgrk/barbar.nvim'
 hook_add = '''
-source ~/.config/nvim/plugins/barbar.rc.lua
+source ~/dotfiles/.config/nvim/plugins/barbar.rc.lua
 '''
 
 # icons
@@ -33,7 +33,7 @@ repo = 'kyazdani42/nvim-web-devicons'
 [[plugins]]
 repo = 'phaazon/hop.nvim'
 hook_add = '''
-source ~/.config/nvim/plugins/hop.rc.lua
+source ~/dotfiles/.config/nvim/plugins/hop.rc.lua
 '''
 
 # template
@@ -43,7 +43,7 @@ repo = 'mattn/sonictemplate-vim'
 [[plugins]]
 repo = 'lukas-reineke/indent-blankline.nvim'
 hook_add = '''
-source ~/.config/nvim/plugins/indent-blankline.rc.lua
+source ~/dotfiles/.config/nvim/plugins/indent-blankline.rc.lua
 '''
 
 # comment on/off
@@ -58,7 +58,7 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-source ~/.config/nvim/plugins/vim-gitgutter.rc.lua
+source ~/dotfiles/.config/nvim/plugins/vim-gitgutter.rc.lua
 '''
 
 # 対となる括弧を追加/削除する
@@ -71,7 +71,7 @@ repo = 'neoclide/coc.nvim'
 merged = 0
 rev = 'release'
 hook_add = '''
-source ~/.config/nvim/plugins/coc.rc.lua
+source ~/dotfiles/.config/nvim/plugins/coc.rc.lua
 '''
 
 # colorscheme
@@ -90,25 +90,32 @@ repo = 'nvim-lua/plenary.nvim'
 [[plugins]]
 repo = 'nvim-telescope/telescope.nvim'
 hook_add = """
-source ~/.config/nvim/plugins/telescope.rc.lua
+source ~/dotfiles/.config/nvim/plugins/telescope.rc.lua
 """
 [[plugins]]
 repo = 'nvim-telescope/telescope-file-browser.nvim'
 [[plugins]]
 repo = 'folke/todo-comments.nvim'
 hook_add = """
-source ~/.config/nvim/plugins/todo-comments.rc.lua
+source ~/dotfiles/.config/nvim/plugins/todo-comments.rc.lua
 """
+
+# [[plugins]]
+# repo = 'SmiteshP/nvim-gps'
+# hook_add = '''
+# source ~/dotfiles/.config/nvim/plugins/nvim-gps.rc.lua
+# '''
+
 # change window size of vim
 [[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
-source ~/.config/nvim/plugins/winresizer.rc.lua
+source ~/dotfiles/.config/nvim/plugins/winresizer.rc.lua
 '''
 
 # [[plugins]]
 # repo = 'sunjon/Shade.nvim'
 # hook_add = '''
-# source ~/.config/nvim/plugins/shade.rc.lua
+# source ~/dotfiles/.config/nvim/plugins/shade.rc.lua
 # '''
 

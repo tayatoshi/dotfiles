@@ -7,7 +7,7 @@ hook_post_update = '''
 TSUpdate
 '''
 hook_source = '''
-source ~/.config/nvim/plugins/nvim-treesitter.rc.lua
+source ~/dotfiles/.config/nvim/plugins/nvim-treesitter.rc.lua
 '''
 
 # ステータスバーの装飾
@@ -15,7 +15,7 @@ source ~/.config/nvim/plugins/nvim-treesitter.rc.lua
 repo = 'nvim-lualine/lualine.nvim'
 on_event = 'BufRead'
 hook_source = '''
-source ~/.config/nvim/plugins/lualine.rc.lua
+source ~/dotfiles/.config/nvim/plugins/lualine.rc.lua
 '''
 
 #vimでR
