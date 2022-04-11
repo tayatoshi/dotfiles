@@ -31,7 +31,10 @@ repo = 'kyazdani42/nvim-web-devicons'
 
 # Move efficiently
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
+repo = 'phaazon/hop.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins/hop.rc.lua
+'''
 
 # template
 [[plugins]]
@@ -103,7 +106,6 @@ hook_add = '''
 source ~/.config/nvim/plugins/winresizer.rc.lua
 '''
 
-# shade inactive windows
 # [[plugins]]
 # repo = 'sunjon/Shade.nvim'
 # hook_add = '''
