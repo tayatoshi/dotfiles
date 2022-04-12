@@ -4,6 +4,8 @@ local custom_iceberg_dark = require'lualine.themes.iceberg_dark'
 custom_iceberg_dark.normal.b.fg = '#c6c8d1'
 custom_iceberg_dark.normal.c.fg = '#c6c8d1'
 
+local gps = require("nvim-gps")
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -50,6 +52,8 @@ require('lualine').setup {
     },
     color = { fg = '#d4d5db', gui='bold' },
   },
+  { gps.get_location, cond = gps.is_available,  color = { fg = '#95c4ce' },
+ },
 },
 lualine_x = {'encoding',
 {

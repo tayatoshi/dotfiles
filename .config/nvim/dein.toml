@@ -100,12 +100,6 @@ hook_add = """
 source ~/dotfiles/.config/nvim/plugins/todo-comments.rc.lua
 """
 
-# [[plugins]]
-# repo = 'SmiteshP/nvim-gps'
-# hook_add = '''
-# source ~/dotfiles/.config/nvim/plugins/nvim-gps.rc.lua
-# '''
-
 # change window size of vim
 [[plugins]]
 repo = 'simeji/winresizer'
