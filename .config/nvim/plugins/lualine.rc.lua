@@ -19,7 +19,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {
       'branch',
-    {'diff',
+      {'diff',
       -- Is it me or the symbol for modified us really weird
       symbols = { added = ' ', modified = '柳 ', removed = ' ' },
     },
@@ -34,8 +34,8 @@ require('lualine').setup {
       hint  = {fg='#95c4ce'},  -- Changes diagnostics' hint color.
     },
   },
-  },
-  lualine_c = {
+},
+lualine_c = {
   {
     'filename',
     file_status = true,      -- Displays file status (readonly status, modified status)
@@ -53,7 +53,7 @@ require('lualine').setup {
     color = { fg = '#d4d5db', gui='bold' },
   },
   { gps.get_location, cond = gps.is_available,  color = { fg = '#95c4ce' },
- },
+},
 },
 lualine_x = {'encoding',
 {
@@ -69,8 +69,8 @@ colored = true,   -- Displays filetype icon in color if set to true
 icon_only = false, -- Display only an icon for filetype
   },
 },
-    lualine_y = {'progress'},
-  lualine_z = {'location'}
+lualine_y = {'progress'},
+lualine_z = {'location'}
 },
 inactive_sections = {
   lualine_a = {},
