@@ -2,19 +2,19 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# file tree
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-depends = ['defx-git', 'defx-icons']
-hook_add = """
-source ~/dotfiles/.config/nvim/plugins/defx.rc.vim
-"""
-
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
+# # file tree
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'
+# depends = ['defx-git', 'defx-icons']
+# hook_add = """
+# source ~/dotfiles/.config/nvim/plugins/defx.rc.vim
+# """
+#
+# [[plugins]]
+# repo = 'kristijanhusak/defx-icons'
+#
+# [[plugins]]
+# repo = 'kristijanhusak/defx-git'
 
 # decorate tabline
 [[plugins]]
