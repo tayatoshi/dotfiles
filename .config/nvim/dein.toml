@@ -3,18 +3,42 @@
 repo = 'Shougo/dein.vim'
 
 # # file tree
-# [[plugins]]
-# repo = 'Shougo/defx.nvim'
-# depends = ['defx-git', 'defx-icons']
-# hook_add = """
-# source ~/dotfiles/.config/nvim/plugins/defx.rc.vim
-# """
-#
-# [[plugins]]
-# repo = 'kristijanhusak/defx-icons'
-#
-# [[plugins]]
-# repo = 'kristijanhusak/defx-git'
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+    let g:fern#default_hidden=1
+    nnoremap <silent> sf :<C-u>Fern . -reveal=%<CR>
+'''
+
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+hook_add = '''
+    let g:fern#renderer = "nerdfont"
+'''
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/glyph-palette.vim'
+hook_add = '''
+  augroup my-glyph-palette
+    autocmd! *
+    autocmd FileType fern call glyph_palette#apply()
+    autocmd FileType nerdtree,startify call glyph_palette#apply()
+  augroup END
+'''
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+depends = ['fern.vim']
+
+[[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
+depends = ['fern.vim']
 
 # decorate tabline
 [[plugins]]
