@@ -1,15 +1,15 @@
-local custom_iceberg_dark = require'lualine.themes.iceberg_dark'
+-- local custom_iceberg_dark = require'lualine.themes.iceberg_dark'
 
 -- Change the background of lualine_c section for normal mode
-custom_iceberg_dark.normal.b.fg = '#c6c8d1'
-custom_iceberg_dark.normal.c.fg = '#c6c8d1'
+-- custom_iceberg_dark.normal.b.fg = '#c6c8d1'
+-- custom_iceberg_dark.normal.c.fg = '#c6c8d1'
 
 local gps = require("nvim-gps")
 
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = custom_iceberg_dark,
+    theme = tokyonight,
     component_separators = { left = '|', right = '|'},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -52,8 +52,7 @@ lualine_c = {
     },
     color = { fg = '#d4d5db', gui='bold' },
   },
-  { gps.get_location, cond = gps.is_available,  color = { fg = '#95c4ce' },
-},
+  { gps.get_location, cond = gps.is_available,  color = { fg = '#95c4ce' },},
 },
 lualine_x = {'encoding',
 {

@@ -105,6 +105,8 @@ repo = 'cocopon/iceberg.vim'
 repo = 'EdenEast/nightfox.nvim'
 [[plugins]]
 repo = 'arcticicestudio/nord-vim'
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
 
 # fuzzy finder
 [[plugins]]

@@ -80,10 +80,16 @@ set inccommand=split
 set clipboard+=unnamedplus
 
 " colorscheme
-colorscheme iceberg
+" colorscheme iceberg
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 0
+let g:tokyonight_italic_comments = 0
+let g:tokyonight_italic_keywords = 0
+colorscheme tokyonight
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
-highlight LineNr ctermbg=NONE guibg=NONE
+highlight LineNr ctermbg=NONE guibg=NONE guifg=#565a6e
+highlight CursorLineNr gui=bold guifg=#e0af68 guibg=NONE
 highlight Folded ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
