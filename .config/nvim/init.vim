@@ -81,10 +81,13 @@ set clipboard+=unnamedplus
 
 " colorscheme
 " colorscheme iceberg
-let g:tokyonight_style = "storm"
+let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = 0
 let g:tokyonight_italic_comments = 0
 let g:tokyonight_italic_keywords = 0
+let g:tokyonight_transparent = 1
+let g:tokyonight_lualine_bold = 1
+
 colorscheme tokyonight
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
@@ -93,15 +96,6 @@ highlight CursorLineNr gui=bold guifg=#e0af68 guibg=NONE
 highlight Folded ctermbg=NONE guibg=NONE
 highlight EndOfBuffer ctermbg=NONE guibg=NONE
 highlight Visual  guifg=NONE guibg=#4C566A gui=none
-
-" 非activeなwindowを色付け
-" augroup ChangeBackground
-"   autocmd!
-"   autocmd WinEnter * highlight Normal guibg=default
-"   autocmd WinEnter * highlight NormalNC guibg='#474646'
-"   autocmd FocusGained * highlight Normal guibg=default " 追加
-"   autocmd FocusLost * highlight Normal guibg='#474646' " 追加
-" augroup END
 
 " set row and column line
 set cursorline
