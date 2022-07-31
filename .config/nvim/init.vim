@@ -162,3 +162,11 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 
+" shade inactive window
+augroup ChangeBackground
+  autocmd!
+  autocmd WinEnter * highlight Normal guibg=default
+  autocmd WinEnter * highlight NormalNC guibg='#474646'
+  autocmd FocusGained * highlight Normal guibg=default " 追加
+  autocmd FocusLost * highlight Normal guibg='#474646' " 追加
+augroup END
