@@ -1,30 +1,30 @@
-local api = vim.api
 local comment_opt = { expr = true, remap = true, replace_keycodes = false }
-
+local opt = {noremap = true, silent = true}
 -- change <leader> to <space>
 vim.g.mapleader = " "
+vim.g.winresizer_start_key = '<C-p>'
 
-api.nvim_set_keymap('i', '<C-j>', '<Esc>', {noremap = true, silent = false})
-api.nvim_set_keymap('v', '<C-j>', '<Esc>', {noremap = true, silent = false})
-api.nvim_set_keymap('n', ';', ':', {noremap = true, silent = false})
+vim.keymap.set('i', '<C-j>', '<Esc>', opt)
+vim.keymap.set('v', '<C-j>', '<Esc>', opt)
+vim.keymap.set('n', ';', ':', opt)
 
-api.nvim_set_keymap("n", "<leader>w", [[<Cmd>HopWord<CR>]], { noremap = true })
+vim.keymap.set("n", "<leader>w", [[<Cmd>HopWord<CR>]], opt)
 
 vim.keymap.set('n', '--', "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'", comment_opt)
-vim.keymap.set('x', '--', '<Plug>(comment_toggle_linewise_visual)')
+vim.keymap.set('x', '--', '<Plug>(comment_toggle_linewise_visual)', opt)
 
 -- settings for buffer
-vim.keymap.set('n', 'te', '<cmd>enew<Return>')
-vim.keymap.set('n', '<Tab>', '<cmd>bnext<Return>')
-vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<Return>')
+vim.keymap.set('n', 'te', '<cmd>enew<Return>', opt)
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<Return>', opt)
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<Return>', opt)
 
 -- split window and move window
-vim.keymap.set('n', '<leader>s', '<cmd>split<Return>')
-vim.keymap.set('n', '<leader>v', '<cmd>vsplit<Return>')
-vim.keymap.set('n', '<leader>h', '<C-w>h')
-vim.keymap.set('n', '<leader>l', '<C-w>l')
-vim.keymap.set('n', '<leader>k', '<C-w>k')
-vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>s', '<cmd>split<Return>', opt)
+vim.keymap.set('n', '<leader>v', '<cmd>vsplit<Return>', opt)
+vim.keymap.set('n', '<leader>h', '<C-w>h', opt)
+vim.keymap.set('n', '<leader>l', '<C-w>l', opt)
+vim.keymap.set('n', '<leader>k', '<C-w>k', opt)
+vim.keymap.set('n', '<leader>j', '<C-w>j', opt)
 
-vim.keymap.set('n', '<Esc><Esc>', '<cmd>nohlsearch<Return>')
-vim.keymap.set('n', '<C-e>', '<cmd>Fern . -reveal=%<Return>')
+vim.keymap.set('n', '<Esc><Esc>', '<cmd>nohlsearch<Return>', opt)
+vim.keymap.set('n', '<C-e>', '<cmd>Fern . -reveal=%<Return>', opt)
