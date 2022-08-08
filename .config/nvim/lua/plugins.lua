@@ -6,8 +6,9 @@ require'packer'.startup(function()
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/mason.nvim'
 	use 'williamboman/mason-lspconfig.nvim'
-	use 'j-hui/fidget.nvim'
 	use 'folke/lsp-colors.nvim'
+	-- visualize loading lsp
+	use 'j-hui/fidget.nvim'
 	-- mason
 	use 'hrsh7th/nvim-cmp'
 	use 'onsails/lspkind.nvim'
@@ -17,6 +18,32 @@ require'packer'.startup(function()
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
+
+    -- generate documents
+	use 'kkoomen/vim-doge'
+-- Lua
+use {
+	"folke/which-key.nvim",
+	config = function()
+		require("which-key").setup {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		}
+	end
+}
+use {
+	'jose-elias-alvarez/null-ls.nvim',
+	config = [[require('plugins.null-ls')]]
+}
+
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup{}
+		end
+	}
 
 	-- treesitter
 	use {
@@ -38,8 +65,8 @@ require'packer'.startup(function()
 	use {
 		'phaazon/hop.nvim',
 		branch = 'v2',
-		config = function()
-			require('hop').setup()
+		config= function()
+			require('hop').setup{}
 		end
 	}
 	use {
@@ -87,6 +114,7 @@ require'packer'.startup(function()
 	-- simple filer(mapping:<C-e>)
 	use 'lambdalisue/fern.vim'
 
+	-- simple filer(mapping:<C-p>)
 	use 'simeji/winresizer'
 
 	-- git
