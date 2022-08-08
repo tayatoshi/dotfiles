@@ -1,0 +1,137 @@
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "file-icons",
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader","w"],
+      "after": ["leader", "leader", "leader", "b", "d", "w"],
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "w", "h"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "w", "l"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "w", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "w", "k"]
+    },
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"],
+      "silent": false
+    },
+    {
+      "before": ["leader","s"],
+      "commands": [":split"],
+      "silent": false
+    },
+    {
+      "before": ["-","-"],
+      "after": ["cmd","/"],
+      "silent": false
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // normalモードで ; が :
+    {
+      "before": [";"],
+      "after": [":"]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    // ctrl + j でESC
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    // ctrl + j でESC
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": [
+    "#161821",
+    "#7dcfff"
+  ],
+  "vim.statusBarColors.insert": [
+    "#9ece6a",
+    "#161821"
+  ],
+  "vim.statusBarColors.visual": [
+    "#bb9af7",
+    "#161821"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#bb9af7",
+    "#161821"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#bb9af7",
+    "#161821"
+  ],
+  "vim.statusBarColors.replace": [
+    "#E2A478",
+    "#161821"
+  ],
+  "vim.statusBarColors.commandlineinprogress": [
+    "#e0af68",
+    "#161821"
+  ],
+  "vim.statusBarColors.searchinprogressmode": [
+    "#e0af68",
+    "#161821"
+  ],
+  "vim.statusBarColors.easymotionmode": [
+    "#818596",
+    "#161821"
+  ],
+  "vim.statusBarColors.easymotioninputmode": [
+    "#818596",
+    "#161821"
+  ],
+  "vim.statusBarColors.surroundinputmode": [
+    "#818596",
+    "#161821"
+  ],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#161821",
+    "statusBar.noFolderBackground": "#161821",
+    "statusBar.debuggingBackground": "#161821",
+    "statusBar.foreground": "#7dcfff",
+    "statusBar.debuggingForeground": "#7dcfff",
+    "tab.activeBackground": "#666666cc",
+    "editor.lineHighlightBackground": "#75727298",
+    "editorLineNumber.activeForeground": "#ffffff",
+    "editor.selectionBackground": "#bbbcbd66",
+    "editorSuggestWidget.selectedBackground": "#89afe083",
+    "editorBracketMatch.background": "#d396116b",
+    "editorCursor.foreground": "#ffffff"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontFamily": "Ricty Diminished, Hack Nerd Font Mono",
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "markdown.marp.enableHtml": true,
+  "Lua.telemetry.enable": false,
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  }
+}
