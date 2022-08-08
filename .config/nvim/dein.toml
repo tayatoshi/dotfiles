@@ -139,3 +139,5 @@ source ~/dotfiles/.config/nvim/plugins/winresizer.rc.lua
 # source ~/dotfiles/.config/nvim/plugins/shade.rc.lua
 # '''
 
+[[plugins]]
+repo = 'eigenfoo/stan-vim'
