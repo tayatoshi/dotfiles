@@ -7,7 +7,7 @@ require('mappings')
 require('plugins')
 require('lsp')
 require('nvim-cmp')
-require('color')
+require('colors')
 
 vim.wo.number=true
 opt.autoindent=true
@@ -31,5 +31,6 @@ opt.swapfile = false
 
 opt.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
 vim.g.python3_host_prog='$HOME/.pyenv/versions/neovim3/bin/python3'
+vim.g.doge_doc_standard_python = 'google'
 
 vim.g['fern#default_hidden'] = 1
