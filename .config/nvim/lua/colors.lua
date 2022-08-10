@@ -1,5 +1,4 @@
 -- settings of colorscheme tokyonight
-vim.cmd[[colorscheme tokyonight]]
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_terminal_colors = true
 vim.g.tokyonight_italic_functions = false
@@ -8,6 +7,8 @@ vim.g.tokyonight_italic_keywords = false
 vim.g.tokyonight_italic_variables = false
 vim.g.tokyonight_transparent = true
 vim.g.tokyonight_lualine_bold = true
+
+vim.cmd[[colorscheme tokyonight]]
 
 vim.cmd [[
 	highlight CursorLine guibg=#3B4252
