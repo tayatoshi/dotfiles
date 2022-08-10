@@ -1,14 +1,3 @@
-# pyenvのpath
-# Execute this interactively:{{{
-# set -Ux PYENV_ROOT $HOME/.pyenv
-# set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-# }}}
-status is-login; and pyenv init --path | source
-status is-interactive; and pyenv init - | source
-
-# nodebrewのpath
-set -x PATH $HOME/.nodebrew/current/bin $PATH
-
 # alias
 source ~/.config/fish/alias.fish
 
@@ -18,9 +7,12 @@ source ~/.iterm2_shell_integration.fish
 # 最初の挨拶みたいなのを消す
 set fish_greeting ""
 
+if status is-interactive
 # homebrewのpath
-set PATH $PATH $HOME/homebrew/bin
-
+    eval (/opt/homebrew/bin/brew shellenv)
+# anyenvのpath
+	source (anyenv init -|psub)
+end
 # プロンプトのディレクトリの表示を省略しない
 set -g fish_prompt_pwd_dir_length 0
 
@@ -68,7 +60,8 @@ end
 # lsdのファイル表示を青太文字から青普通文字に変更
 export LS_COLORS="$LS_COLORS:di=00;34:*.png=00;35"
 
+fish_add_path /opt/homebrew/bin
 # path for Rust
-set PATH ~/.cargo/bin $PATH
+# set PATH ~/.cargo/bin $PATH
 # プロンプト用starship の読み込み(config.fishの最後に書いておく)
 starship init fish | source
