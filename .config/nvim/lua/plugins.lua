@@ -131,5 +131,7 @@ use {
 		end
 	}
 
+	-- use 'jalvesaq/Nvim-R'
+	use { 'jalvesaq/Nvim-R', ft = { 'r' } }
 
 end)

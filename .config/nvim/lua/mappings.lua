@@ -2,6 +2,7 @@ local comment_opt = { expr = true, remap = true, replace_keycodes = false }
 local opt = {noremap = true, silent = true}
 -- change <leader> to <space>
 vim.g.mapleader = " "
+vim.g.maplocalleader = ','
 vim.g.winresizer_start_key = '<C-p>'
 
 vim.keymap.set('i', '<C-j>', '<Esc>', opt)
