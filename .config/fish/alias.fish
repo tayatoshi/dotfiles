@@ -39,3 +39,5 @@ alias la='lsd -la'
 # コマンドで日本語表示&不可視ファイル可視化
 alias tree 'tree -LNaC 2'
 
+# brewでwarningがでたので
+alias brew="env PATH=(string replace (pyenv root)/shims '' (echo $PATH)) brew"
