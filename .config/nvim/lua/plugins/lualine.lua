@@ -1,8 +1,4 @@
--- local custom_iceberg_dark = require'lualine.themes.iceberg_dark'
-
 -- Change the background of lualine_c section for normal mode
--- custom_iceberg_dark.normal.b.fg = '#c6c8d1'
--- custom_iceberg_dark.normal.c.fg = '#c6c8d1'
 
 local navic = require("nvim-navic")
 
