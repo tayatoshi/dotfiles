@@ -1,11 +1,11 @@
 -- Change the background of lualine_c section for normal mode
 
-local navic = require("nvim-navic")
+-- local navic = require("nvim-navic")
 
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = tokyonight,
+    theme = 'tokyonight',
     component_separators = { left = '|', right = '|'},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -48,7 +48,7 @@ lualine_c = {
     },
     color = { fg = '#d4d5db', gui='bold' },
   },
-  { navic.get_location, cond = navic.is_available,  color = { fg = '#95c4ce' },},
+  -- { navic.get_location, cond = navic.is_available,  color = { fg = '#95c4ce' },},
 },
 lualine_x = {'encoding',
 {

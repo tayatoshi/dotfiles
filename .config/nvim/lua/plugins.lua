@@ -69,11 +69,11 @@ use {
 			require('hop').setup{}
 		end
 	}
-	use {
-		'SmiteshP/nvim-navic',
-		requires = 'neovim/nvim-lspconfig',
-		config = [[require('plugins.nvim-navic')]]
-	}
+	-- use {
+	-- 	'SmiteshP/nvim-navic',
+	-- 	requires = 'neovim/nvim-lspconfig',
+	-- 	config = [[require('plugins.nvim-navic')]]
+	-- }
 
 	--  status line
 	use {
