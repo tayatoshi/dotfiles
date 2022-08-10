@@ -1,14 +1,15 @@
+-- settings of colorscheme tokyonight
+vim.cmd[[colorscheme tokyonight]]
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_terminal_colors = true
+vim.g.tokyonight_italic_functions = false
+vim.g.tokyonight_italic_comments = false
+vim.g.tokyonight_italic_keywords = false
+vim.g.tokyonight_italic_variables = false
+vim.g.tokyonight_transparent = true
+vim.g.tokyonight_lualine_bold = true
+
 vim.cmd [[
-    let g:tokyonight_style = "night"
-    let g:tokyonight_italic_functions = 0
-    let g:tokyonight_italic_comments = 0
-    let g:tokyonight_italic_keywords = 0
-    let g:tokyonight_transparent = 1
-    let g:tokyonight_lualine_bold = 1
-
-
-	colorscheme tokyonight
-
 	highlight CursorLine guibg=#3B4252
 	highlight CursorColumn guibg=#3B4252
 	highlight Normal ctermbg=NONE guibg=NONE
@@ -31,3 +32,4 @@ vim.cmd [[
 	highlight GitSignsChange guifg=#e0af68
 	highlight GitSignsDelete guifg=#f7768e
 	]]
+
