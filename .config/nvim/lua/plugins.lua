@@ -109,6 +109,11 @@ use {
 		requires = 'nvim-treesitter/nvim-treesitter',
 		config = [[require('plugins.indent-blankline')]]
 	}
+    use { "yioneko/nvim-yati",
+        requires = "nvim-treesitter/nvim-treesitter",
+        config = [[require('plugins.nvim-yati')]]
+    }
+
 	use 'jiangmiao/auto-pairs'
 
 	-- simple filer(mapping:<C-e>)
