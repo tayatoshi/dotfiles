@@ -9,36 +9,36 @@ require'packer'.startup(function()
 	use 'folke/lsp-colors.nvim'
 	-- visualize loading lsp
 	use 'j-hui/fidget.nvim'
-	-- mason
+
+	-- cmp
 	use 'hrsh7th/nvim-cmp'
 	use 'onsails/lspkind.nvim'
 	use 'hrsh7th/cmp-nvim-lsp'
-	-- use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
 
     -- generate documents
-	use 'kkoomen/vim-doge'
--- Lua
-use {
-	"folke/which-key.nvim",
-	config = function()
-		require("which-key").setup {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		}
-	end
-}
-use {
-	'jose-elias-alvarez/null-ls.nvim',
-	config = [[require('plugins.null-ls')]]
-}
-
-	use {
-		"folke/trouble.nvim",
+    use 'kkoomen/vim-doge'
+    -- Lua
+    use {
+        'folke/which-key.nvim',
+        config = function()
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+    -- formatter, linter
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        config = [[require('plugins.null-ls')]]
+    }
+    use {
+		'folke/trouble.nvim',
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
 			require("trouble").setup{}
@@ -109,7 +109,8 @@ use {
 		requires = 'nvim-treesitter/nvim-treesitter',
 		config = [[require('plugins.indent-blankline')]]
 	}
-    use { "yioneko/nvim-yati",
+    use {
+        'yioneko/nvim-yati',
         requires = "nvim-treesitter/nvim-treesitter",
         config = [[require('plugins.nvim-yati')]]
     }
@@ -137,6 +138,6 @@ use {
 	}
 
 	-- use 'jalvesaq/Nvim-R'
-	use { 'jalvesaq/Nvim-R', ft = { 'r' } }
+	use {'jalvesaq/Nvim-R', ft = { 'r' } }
 
 end)
