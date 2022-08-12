@@ -3,6 +3,7 @@ local cmp = require'cmp'
 cmp.setup({
 	snippet = {},
 	window = {
+        -- documentation = cmp.config.window.bordered(),
 		completion = {
 			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 			col_offset = -3,
@@ -14,8 +15,8 @@ cmp.setup({
 		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
-		['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-	}),
+		['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    }),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'path' },

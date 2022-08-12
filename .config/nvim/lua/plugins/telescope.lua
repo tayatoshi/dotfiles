@@ -32,4 +32,9 @@ telescope.setup{
 			"%.history/.*"
 		},
 	},
+    pickers = {
+    colorscheme = {
+      enable_preview = true
+    }
+  }
 }

@@ -7,7 +7,7 @@ vim.g.winresizer_start_key = '<C-p>'
 
 vim.keymap.set('i', '<C-j>', '<Esc>', opt)
 vim.keymap.set('v', '<C-j>', '<Esc>', opt)
-vim.keymap.set('n', ';', ':', opt)
+vim.keymap.set('n', ';', ':', {noremap = true, silent = false})
 
 vim.keymap.set("n", "<leader>w", [[<Cmd>HopWord<CR>]], opt)
 
