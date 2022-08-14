@@ -17,18 +17,11 @@ require('lualine').setup {
       'branch',
       {'diff',
       -- Is it me or the symbol for modified us really weird
-      symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+      symbols = { added = ' ', modified = '柳', removed = ' ' },
     },
     {'diagnostics',
-    sources = {"coc"},
-    symbols = { error = " ", warn = ' ', info = ' ', hint = ''},
-    diagnostics_color = {
-      -- Same values as the general color option can be used here.
-      error = {fg='#d1666a'}, -- Changes diagnostics' error color.
-      warn  = {fg='#ff922b'},  -- Changes diagnostics' warn color.
-      info  = {fg='#bd87e6'},  -- Changes diagnostics' info color.
-      hint  = {fg='#95c4ce'},  -- Changes diagnostics' hint color.
-    },
+    sources = {'nvim_diagnostic'},
+    symbols = { error = "E ", warn = 'W ', info = 'I ', hint = 'H'},
   },
 },
 lualine_c = {
