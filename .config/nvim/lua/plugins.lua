@@ -120,9 +120,6 @@ require'packer'.startup(function()
 	-- simple filer(mapping:<C-e>)
 	use 'lambdalisue/fern.vim'
 
-	-- simple filer(mapping:<C-p>)
-	use 'simeji/winresizer'
-
 	-- git
 	use {
 		'lewis6991/gitsigns.nvim',

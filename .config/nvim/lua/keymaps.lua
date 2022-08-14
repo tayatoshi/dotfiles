@@ -3,7 +3,6 @@ local opt = {noremap = true, silent = true}
 -- change <leader> to <space>
 vim.g.mapleader = " "
 vim.g.maplocalleader = ','
-vim.g.winresizer_start_key = '<C-p>'
 
 vim.keymap.set('i', '<C-j>', '<Esc>', opt)
 vim.keymap.set('v', '<C-j>', '<Esc>', opt)
@@ -29,3 +28,11 @@ vim.keymap.set('n', '<leader>j', '<C-w>j', opt)
 
 vim.keymap.set('n', '<Esc><Esc>', '<cmd>nohlsearch<Return>', opt)
 vim.keymap.set('n', '<C-e>', '<cmd>Fern . -reveal=%<Return>', opt)
+
+-- Telescope
+vim.keymap.set("n", "<C-p>", [[<Cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], { noremap = true })
+vim.keymap.set("n", "<C-g>", [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true })
+vim.keymap.set("n", "<leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true })
+vim.keymap.set("n", "<leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true })
+vim.keymap.set("n", "<leader>fm", [[<Cmd>lua require('telescope.builtin').keymaps()<CR>]], { noremap = true })
+vim.keymap.set("n", "<leader>gb", [[<Cmd>lua require('telescope.builtin').git_branches()<CR>]], { noremap = true })
