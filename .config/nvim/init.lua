@@ -1,7 +1,7 @@
 vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
 
 require('options')
-require('mappings')
+require('keymaps')
 require('plugins')
 require('lsp')
 require('nvim-cmp')
