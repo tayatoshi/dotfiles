@@ -115,6 +115,12 @@ require'packer'.startup(function()
         config = [[require('plugins.nvim-yati')]]
     }
 
+    -- search highlight
+    use {
+        'kevinhwang91/nvim-hlslens',
+        config = [[require('plugins.nvim-hlslens')]]
+    }
+
 	use 'jiangmiao/auto-pairs'
 
 	-- simple filer(mapping:<C-e>)
@@ -138,3 +144,5 @@ require'packer'.startup(function()
 	use {'jalvesaq/Nvim-R', ft = { 'r' } }
 
 end)
+
+
