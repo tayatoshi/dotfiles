@@ -5,11 +5,13 @@ dotfiles
 This repository is my dotfiles.
 
 ### NeoVim
-- iceberg: favorite color scheme
+The package manager I use is Packer.
+- tokyonight(storm): favorite color scheme
 - Telescope.nvim: fzzey finder
-- defx.nvim: Filer
+- fern: Filer
+- lualine.lua: cool status line
+- barbar.nvim: cool tab line
 - indent.nvim
-- lualine.lua
      
 ### fish
 - starship: for prompt on terminal.
