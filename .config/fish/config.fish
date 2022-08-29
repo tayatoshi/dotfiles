@@ -61,7 +61,9 @@ end
 export LS_COLORS="$LS_COLORS:di=00;34:*.png=00;35"
 
 fish_add_path /opt/homebrew/bin
+
 # path for Rust
-# set PATH ~/.cargo/bin $PATH
+set PATH ~/.cargo/bin $PATH
+
 # プロンプト用starship の読み込み(config.fishの最後に書いておく)
 starship init fish | source
