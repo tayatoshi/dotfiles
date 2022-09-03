@@ -8,28 +8,28 @@
         "after": ["leader", "leader", "leader", "b", "d", "w"],
       },
       {
-        "before": ["<C-h>"],
+        "before": ["<C-T>", "h"],
         "after": ["<C-w>", "w", "h"]
       },
       {
-        "before": ["<C-l>"],
+        "before": ["<C-T>", "l"],
         "after": ["<C-w>", "w", "l"]
       },
       {
-        "before": ["<C-j>"],
+        "before": ["<C-T>", "j"],
         "after": ["<C-w>", "w", "j"]
       },
       {
-        "before": ["<C-k>"],
+        "before": ["<C-T>", "k"],
         "after": ["<C-w>", "w", "k"]
       },
       {
-        "before": ["leader", "v"],
+        "before": ["<C-T>", "|"],
         "commands": [":vsplit"],
         "silent": false
       },
       {
-        "before": ["leader","s"],
+        "before": ["<C-T>", "-"],
         "commands": [":split"],
         "silent": false
       },
