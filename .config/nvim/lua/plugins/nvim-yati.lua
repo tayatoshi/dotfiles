@@ -1,3 +1,6 @@
 require("nvim-treesitter.configs").setup {
-  yati = { enable = true },
+  yati = {
+    enable = true,
+    disable = { "lua" },
+  },
 }

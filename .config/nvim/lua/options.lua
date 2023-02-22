@@ -12,6 +12,7 @@ vim.opt.showcmd = true
 vim.opt.ambiwidth = "single"
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.swapfile = false
+vim.opt.laststatus = 3
 
 -- tab
 vim.opt.tabstop=4
@@ -40,3 +41,14 @@ vim.g.python3_host_prog='$HOME/.anyenv/envs/pyenv/versions/3.10.6/bin/python3'
 vim.g.doge_doc_standard_python = 'google'
 
 vim.g['fern#default_hidden'] = 1
+
+-- edges of split window
+vim.opt.fillchars = {
+    horiz = '━',
+    horizup = '┻',
+    horizdown = '┳',
+    vert = '┃',
+    vertleft  = '┫',
+    vertright = '┣',
+    verthoriz = '╋',
+}

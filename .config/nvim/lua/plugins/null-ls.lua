@@ -5,7 +5,7 @@ require("null-ls").setup({
         require("null-ls").builtins.formatting.sql_formatter,       --Formatter for sql
 
         -- Diagnostics
-        require("null-ls").builtins.diagnostics.mypy,     --Diagnostics for python
+        require("null-ls").builtins.diagnostics.flake8,     --Diagnostics for python
         require("null-ls").builtins.diagnostics.sqlfluff,     --Diagnostics for sql
     },
 })
