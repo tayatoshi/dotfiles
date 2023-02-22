@@ -12,7 +12,7 @@ end })
 require"fidget".setup()
 
 -- Lua
-require'lspconfig'.lua_language_server.setup {
+require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
@@ -21,9 +21,9 @@ require'lspconfig'.lua_language_server.setup {
       diagnostics = {
         globals = {'vim', 'use'},
       },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
+      -- workspace = {
+      --   library = vim.api.nvim_get_runtime_file("", true),
+      -- },
       telemetry = {
         enable = false,
       },

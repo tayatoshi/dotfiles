@@ -1,4 +1,4 @@
-vim.cmd[[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
 
 require'packer'.startup(function()
 	use {'wbthomason/packer.nvim', opt=true}
@@ -142,6 +142,12 @@ require'packer'.startup(function()
 
 	-- use 'jalvesaq/Nvim-R'
 	use {'jalvesaq/Nvim-R', ft = { 'r' } }
+
+	-- shade inactive window
+    use {
+        'levouh/tint.nvim',
+        config = [[require('plugins.tint')]]
+    }
 
 end)
 
