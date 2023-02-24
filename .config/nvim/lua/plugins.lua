@@ -69,11 +69,6 @@ require'packer'.startup(function()
 			require('hop').setup{}
 		end
 	}
-	-- use {
-	-- 	'SmiteshP/nvim-navic',
-	-- 	requires = 'neovim/nvim-lspconfig',
-	-- 	config = [[require('plugins.nvim-navic')]]
-	-- }
 
 	--  status line
 	use {

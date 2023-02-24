@@ -29,7 +29,7 @@ vim.cmd [[
 	highlight BufferCurrent gui=bold
 
 
-	highlight VertSplit ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
+    highlight WinSeparator ctermfg=10 ctermbg=241 cterm=NONE guifg=#a3be8c guibg=default gui=NONE
 
     highlight GitSignsAdd    guifg=#2ecc71
 	highlight GitSignsChange guifg=#e0af68
