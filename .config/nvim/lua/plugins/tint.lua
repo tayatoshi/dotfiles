@@ -1,5 +1,5 @@
 require("tint").setup({
-  tint = -48,  -- Darken colors, use a positive value to brighten
+  tint = -70,  -- Darken colors, use a positive value to brighten
   saturation = 0.2,  -- Saturation to preserve
   transforms = require("tint").transforms.SATURATE_TINT,  -- Showing default behavior, but value here can be predefined set of transforms
   tint_background_colors = false,  -- Tint background portions of highlight groups
