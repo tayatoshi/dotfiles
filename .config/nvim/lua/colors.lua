@@ -22,6 +22,7 @@ vim.cmd [[
 	highlight Folded ctermbg=NONE guibg=NONE
 	highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
+    highlight PmenuSel guibg=#5a6a89
 
 	highlight CursorLine guibg=#3B4252
 	highlight CursorColumn guibg=#3B4252
