@@ -10,8 +10,8 @@ vim.keymap.set('n', ';', ':', {noremap = true, silent = false})
 
 vim.keymap.set("n", "<leader>w", [[<Cmd>HopWord<CR>]], opt)
 
-vim.keymap.set('n', '--', "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'", comment_opt)
-vim.keymap.set('x', '--', '<Plug>(comment_toggle_linewise_visual)', opt)
+-- vim.keymap.set('n', '--', "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'", comment_opt)
+-- vim.keymap.set('x', '---', '<Plug>(comment_toggle_linewise_visual)', opt)
 
 -- settings for buffer
 vim.keymap.set('n', 'te', '<cmd>enew<Return>', opt)

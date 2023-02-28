@@ -21,14 +21,12 @@ require'packer'.startup(function()
 
     -- generate documents
     use 'kkoomen/vim-doge'
-    -- Lua
+
+    -- cheet sheet
     use {
         'folke/which-key.nvim',
         config = function()
             require("which-key").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
             }
         end
     }
@@ -37,6 +35,7 @@ require'packer'.startup(function()
         'jose-elias-alvarez/null-ls.nvim',
         config = [[require('plugins.null-ls')]]
     }
+    -- list trouble
     use {
 		'folke/trouble.nvim',
 		requires = "kyazdani42/nvim-web-devicons",
@@ -54,13 +53,12 @@ require'packer'.startup(function()
 	 -- comment on/off(mapping:--)
 	use {
 		'numToStr/Comment.nvim',
-		config = function()
-			require('Comment').setup()
-		end
+		config = [[require('plugins.comment')]]
 	}
 
 	--  color scheme
 	use 'folke/tokyonight.nvim'
+
 	-- move efficiently(mapping:<leader>w)
 	use {
 		'phaazon/hop.nvim',
@@ -116,7 +114,11 @@ require'packer'.startup(function()
         config = [[require('plugins.nvim-hlslens')]]
     }
 
+    -- auto close
 	use 'jiangmiao/auto-pairs'
+
+    -- highlight pairs
+    use 'andymass/vim-matchup'
 
 	-- simple filer(mapping:<C-e>)
 	use 'lambdalisue/fern.vim'
