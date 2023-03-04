@@ -4,11 +4,10 @@ require'nvim-treesitter.configs'.setup {
     disable = {},
   },
   indent = {
-    enable = true,
-    disable = {"python"},
+    enable = false,
   },
   ensure_installed = { "c", "fish", "javascript", "json", "julia", "lua", "markdown", "python", "r", "rust", "toml", "yaml" },
-  -- autotag = {
-  --   enable = true,
-  -- }
+  autotag = {
+    enable = true,
+  }
 }
