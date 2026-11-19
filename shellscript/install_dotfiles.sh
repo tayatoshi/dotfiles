@@ -1,23 +1,29 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
-DIRCONFIG=~/.config
+# このスクリプトの場所から dotfiles のルートを求める(clone 先に依存しない)
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DIRCONFIG="$HOME/.config"
 
-if [ ! -d $DIRCONFIG ]; then
-  echo 'mkdir $DIRCONFIG'
-  mkdir $DIRCONFIG
-fi
+# 既に実体のファイル/ディレクトリがある場合は .bak に退避してからリンクを張る
+link() {
+  local src="$1" dest="$2"
+  if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+    echo "backup: $dest -> $dest.bak"
+    mv "$dest" "$dest.bak"
+  fi
+  ln -sfn "$src" "$dest"
+  echo "link: $dest -> $src"
+}
 
-if [ ! -d $DIRCONFIG/nvim ]; then
-  ln -sf ~/dotfiles/.config/nvim ~/.config/nvim
-fi
+mkdir -p "$DIRCONFIG"
 
-if [ ! -d $DIRCONFIG/fish ]; then
-  ln -sf ~/dotfiles/.config/fish ~/.config/fish
-fi
+link "$DOTFILES/.config/nvim"          "$DIRCONFIG/nvim"
+link "$DOTFILES/.config/fish"          "$DIRCONFIG/fish"
+link "$DOTFILES/.config/starship.toml" "$DIRCONFIG/starship.toml"
+link "$DOTFILES/.config/herdr"         "$DIRCONFIG/herdr"
+link "$DOTFILES/.tmux.conf"            "$HOME/.tmux.conf"
+link "$DOTFILES/.Rprofile"             "$HOME/.Rprofile"
+link "$DOTFILES/changelog.config.js"   "$HOME/changelog.config.js"
 
-ln -sf ~/dotfiles/.config/starship.toml ~/.config/starship.toml
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/dotfiles/.Rprofile ~/.Rprofile
-ln -sf ~/dotfiles/changelog.config.js ~/changelog.config.js
 echo '---SymLink Done.---'

@@ -4,24 +4,27 @@ dotfiles
 
 This repository is my dotfiles.
 
-### NeoVim
-The package manager I use is Packer.
-- tokyonight(storm): favorite color scheme
-- Telescope.nvim: fzzey finder
-- fern: Filer
-- lualine.lua: cool status line
-- barbar.nvim: cool tab line
-- indent.nvim
-     
+### Neovim
+Based on [LazyVim](https://www.lazyvim.org/). The plugin manager is lazy.nvim.
+- tokyonight: color scheme
+- Telescope: fuzzy finder (LazyVim extra `editor.telescope`)
+- Plugin versions are pinned in `lazy-lock.json`.
+- Personal settings live in `lua/config/` (options, keymaps, autocmds) and `lua/plugins/`.
+
 ### fish
 - starship: for prompt on terminal.
 - Fonts
     - hack nerd font
     - ricty for powerline
 
+### tmux
+- prefix is `Ctrl+t`.
+- Mouse is on. In Ghostty, hold `Shift` to select text natively.
+- Copy mode uses vi keys (`v` to select, `y` to copy via `pbcopy`). Dragging with the mouse also copies.
+- Inactive panes are shaded.
+
 ### Others
-- iTerm2: famous terminal emurator with iceberg color scheme
-- tmux: Let color of inactive panes be shade
+- Ghostty: terminal emulator
 - lsd: Luxury ls command
 
 Files:
@@ -29,16 +32,16 @@ Files:
     .
     ├── .Rprofile
     ├── .config
-    │   ├── fish
-    │   ├── nvim
-    │   └── starship.toml
+    │   ├── fish
+    │   ├── nvim
+    │   └── starship.toml
     ├── .gitignore
     ├── .latexmkrc
     ├── .tmux.conf
     ├── .zshrc
     ├── README.md
     ├── brew
-    │   └── brewlist.txt
+    │   └── brewlist.txt
     └── shellscript
         ├── cafd.sh
         ├── ide
@@ -46,15 +49,19 @@ Files:
 
 Usage:
 -------------
-Link symbolics each files and folders by the floowing command:
+Symlink each file and folder with the following commands:
 ```bash
-git clone git@github.com:tayatoshi/dotfiles.git
+git clone https://github.com/tayatoshi/dotfiles.git
 cd dotfiles/shellscript
-chmod 777 install_dotfiles.sh
+chmod +x install_dotfiles.sh
 ./install_dotfiles.sh
 ```
 
+The script works from wherever the repository is cloned.
+If a real file or directory already exists at a target path, it is moved to `<path>.bak` before the link is created.
+
+`.zshrc` and `.latexmkrc` are not linked by the script. Link them manually if needed.
+
 Note:
 -------------
-I have not yet set up automatic installation of packages in Homebew .
-
+I have not yet set up automatic installation of packages in Homebrew.
