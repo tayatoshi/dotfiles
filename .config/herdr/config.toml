@@ -27,3 +27,15 @@ resize_pane_left = "ctrl+shift+alt+left"
 resize_pane_down = "ctrl+shift+alt+down"
 resize_pane_up = "ctrl+shift+alt+up"
 resize_pane_right = "ctrl+shift+alt+right"
+
+[ui]
+# エージェントの状態を色付きの点ではなく、形の違う記号で表示する
+status_indicators = "symbols"
+# Ctrl+t b で折りたたんだとき、細いバーも残さず完全に非表示にする
+sidebar_collapsed_mode = "hidden"
+
+[ui.sidebar.agents]
+rows = [
+  ["terminal_title", "workspace", "tab"],
+  ["agent"],
+]
