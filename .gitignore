@@ -1,2 +1,6 @@
 .DS_Store
 fish/fish_variables
+
+# herdr のランタイムファイル(ソケット・ログ・セッション状態)
+.config/herdr/*
+!.config/herdr/config.toml

@@ -1,0 +1,29 @@
+onboarding = false
+
+[terminal]
+# tmux の split-window -c "#{pane_current_path}" 相当
+new_cwd = "follow"
+
+[keys]
+# tmux と同じ prefix
+prefix = "ctrl+t"
+
+# 設定の再読み込み(tmux の prefix+r 相当)
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+
+# ペイン分割(tmux: | と -)
+split_vertical = ["prefix+|", "prefix+backslash"]
+split_horizontal = "prefix+minus"
+
+# ペイン移動(tmux: hjkl)
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+# ペインのリサイズ(tmux の M-矢印 の代わり。alt 単体は macOS で化けるため ctrl+shift+alt)
+resize_pane_left = "ctrl+shift+alt+left"
+resize_pane_down = "ctrl+shift+alt+down"
+resize_pane_up = "ctrl+shift+alt+up"
+resize_pane_right = "ctrl+shift+alt+right"
