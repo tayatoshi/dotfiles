@@ -1,0 +1,55 @@
+# --- 見た目・フォント ---
+# フォントサイズ（お好みで調整してください）
+font-size = 13
+# 行間を少し広げてモダンにする
+adjust-cell-height = 10%
+# フォントファミリー 
+# font-family = "BlexMono Nerd Font Mono"
+font-family = "Menlo"
+
+# テーマ
+theme = TokyoNight Moon
+
+# --- ウィンドウ・透明度 ---
+# 背景を透過させてブラー（すりガラス効果）を入れる
+# background-opacity = 0.90
+# background-blur-radius = 20
+
+# ウィンドウ内の余白を入れて圧迫感を減らす
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+# --- Macネイティブな挙動 ---
+# タイトルバーを透明にしてスッキリさせる
+macos-titlebar-style = transparent
+# フルスクリーン時にMac標準の挙動にする
+macos-window-shadow = true
+# 入力中はマウスカーソルを隠す
+mouse-hide-while-typing = true
+
+# --- 操作性 ---
+# 選択しただけでクリップボードにコピー
+copy-on-select = true
+# クリップボードの読み書きを許可
+clipboard-read = allow
+clipboard-write = allow
+
+# --- キーバインド設定（画面分割） ---
+#  Cmd+Enter で「下に」分割
+# keybind = cmd+enter=new_split:down
+# Cmd+Shift+Enter で「右に」分割
+# keybind = cmd+shift+enter=new_split:right
+# Cmd + 矢印キー で分割した画面を「移動」
+keybind = cmd+left=goto_split:left
+keybind = cmd+right=goto_split:right
+keybind = cmd+up=goto_split:top
+keybind = cmd+down=goto_split:bottom
+# Cmd + Shift + 矢印キー でサイズを「調整」
+keybind = cmd+shift+left=resize_split:left,20
+keybind = cmd+shift+right=resize_split:right,20
+keybind = cmd+shift+up=resize_split:up,20
+keybind = cmd+shift+down=resize_split:down,20
+
+# Cmd + W で現在の「ペイン（分割）」を閉じる
+keybind = cmd+w=close_surface
