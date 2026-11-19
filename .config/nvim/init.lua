@@ -1,9 +1,2 @@
-vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
-
-require('options')
-require('keymaps')
-require('plugins')
-require('lsp')
-require('nvim-cmp')
-require('colors')
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
