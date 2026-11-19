@@ -24,7 +24,8 @@ Based on [LazyVim](https://www.lazyvim.org/). The plugin manager is lazy.nvim.
 - Inactive panes are shaded.
 
 ### Others
-- Ghostty: terminal emulator
+- Ghostty: terminal emulator (theme: TokyoNight Moon, matches Neovim's tokyonight). Linked to `~/Library/Application Support/com.mitchellh.ghostty/config`.
+- herdr: terminal workspace manager. prefix is `Ctrl+t`; the sidebar toggles with `Ctrl+t b` and hides completely when collapsed.
 - lsd: Luxury ls command
 
 Files:
@@ -33,6 +34,8 @@ Files:
     ├── .Rprofile
     ├── .config
     │   ├── fish
+    │   ├── ghostty
+    │   ├── herdr
     │   ├── nvim
     │   └── starship.toml
     ├── .gitignore
