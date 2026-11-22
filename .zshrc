@@ -86,7 +86,16 @@ fdr() {
 # 5. プロンプト設定 (Prompt Configuration)
 # ==========================================
 # ディレクトリ移動時にパス（%~）が動的に更新されるよう最適化
-PROMPT=$'\n%F{10}┌─ %n@%f %B%F{6}%~%f%b\n%F{10}└❯%f '
+autoload -Uz vcs_info add-zsh-hook
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:git:*' formats ' %F{5}(%b%f%F{3}%c%u%f%F{5})%f'
+zstyle ':vcs_info:git:*' actionformats ' %F{5}(%b|%a%f%F{3}%c%u%f%F{5})%f'
+add-zsh-hook precmd vcs_info
+
+PROMPT=$'\n%F{10}┌─ %n@%f %B%F{6}%~%f%b${vcs_info_msg_0_}\n%F{10}└❯%f '
 
 export PATH="$HOME/.local/bin:$PATH"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
