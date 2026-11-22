@@ -21,8 +21,10 @@ window-padding-y = 10
 window-padding-balance = true
 
 # --- Macネイティブな挙動 ---
-# タイトルバーを非表示にしてスッキリさせる
-macos-titlebar-style = hidden
+# タイトルバーを透明にしてスッキリさせる（ボタンは残す）
+macos-titlebar-style = transparent
+# タイトルを固定の空白にして、ディレクトリ名などを表示しない
+title = " "
 # フルスクリーン時にMac標準の挙動にする
 macos-window-shadow = true
 # 入力中はマウスカーソルを隠す
