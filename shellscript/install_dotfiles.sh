@@ -22,6 +22,9 @@ link "$DOTFILES/.config/nvim"          "$DIRCONFIG/nvim"
 link "$DOTFILES/.config/fish"          "$DIRCONFIG/fish"
 link "$DOTFILES/.config/starship.toml" "$DIRCONFIG/starship.toml"
 link "$DOTFILES/.config/herdr"         "$DIRCONFIG/herdr"
+# herdr デスクトップアプリ: ランタイムファイルが同居するためレイアウトだけをリンクする
+mkdir -p "$DIRCONFIG/herdr-app/layouts"
+link "$DOTFILES/.config/herdr-app/layouts/custom.json" "$DIRCONFIG/herdr-app/layouts/custom.json"
 # Ghostty (macOS) は Application Support 配下の設定を読む
 GHOSTTY_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 mkdir -p "$GHOSTTY_DIR"
