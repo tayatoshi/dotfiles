@@ -35,7 +35,14 @@ status_indicators = "symbols"
 sidebar_collapsed_mode = "hidden"
 
 [ui.sidebar.agents]
+row_gap = 1
+# 1 行目: 状態（記号）+ ワークスペース、2 行目: エージェント名 + タイトル。
+# インラインテーブルは途中で改行できないため rules を持つ行は長くなる。
 rows = [
-  ["terminal_title", "workspace", "tab"],
-  ["agent"],
+  ["state_icon", { token = "workspace", fg = "#c8d3f5", dim = false }],
+  [
+    # agent トークンの値は claude / codex / agy / opencode
+    { token = "agent", rules = [{ contains = "claude", ignore_case = true, fg = "#CC7C5E", dim = false }, { contains = "codex", ignore_case = true, fg = "#49A3B0", dim = false }, { contains = "agy", ignore_case = true, fg = "#60BA7E", dim = false }, { contains = "opencode", ignore_case = true, fg = "#3B82F6", dim = false }] },
+    { token = "terminal_title_stripped", fg = "#828bb8", dim = false },
+  ],
 ]
